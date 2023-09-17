@@ -1,0 +1,313 @@
+/* Colores */
+:root {
+    --black: #000000;
+    --dark: #222f3e;
+    --bg-dark: #222831;
+    --fuel: #576574;
+    --text-dark: #8395a7;
+    --text-grey: #c8d6e5;
+    --white: #FFFFFF;
+    --cyan: #00D2D3;
+    --green: #1dd1a1;
+    --purple: #5F27CD;
+    --yellow: #feca57;
+    --orange: #ff9f43;
+    --amour: #ee5253; 
+    --red: #ff0000;    
+  }
+/* Configuración general */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    outline: 0;
+    scroll-behavior: smooth;
+    color: var(--white);
+}
+/* General enlaces */
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+/* General listas */
+ul{
+    list-style: none;
+}
+body{
+    background-color: var(--bg-dark);
+}
+
+/* -----------------------------Estilos móvil pequeño----------------------------- */
+/* -----------------header y nav----------------- */
+header{
+    padding: 1rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Cuando el usuario baje, que el borde aparezca*/
+    /* border-bottom: 1px solid var(--black); */
+}
+.header__icon{
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 500ms;
+}
+.header__icon:hover{
+    scale: 1.2;
+    color: var(--cyan);
+}
+.header__icon:active{
+    scale: .9; 
+}
+.header__logo__movil--ligth{
+    width: 50px;
+    transition: 500ms;
+}
+.header__logo__movil--ligth:hover{
+    scale: 1.2;
+}
+.header__logo__movil--ligth:active{
+    scale: .9;
+}
+
+nav{
+    background-color: var(--dark);
+    padding: 1em;
+    width: 120px;
+    border-radius: 1.5em ;
+    font-family: 'Quicksand', sans-serif;
+    /* Quitado temporalemente hasta configurarlo con JS */
+    display: none;
+}
+nav>ul{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+nav>ul>li>a{
+    color: var(--cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 500ms;
+}
+nav>ul>li>a:hover{
+    scale: 1.2;
+}
+nav>ul>li>a:active{
+    color: var(--white);
+    scale: .9; 
+}
+nav>ul>li>a>i{
+    font-size: 1.25em;
+
+}
+nav>ul>li>a>span{
+    font-size: .9em;
+}
+.nav__movil--cerrar{
+    color: var(--cyan);
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: 500ms;
+} 
+.nav__movil--cerrar:hover{
+    scale: 1.25;
+}
+.nav__movil--cerrar:active{
+    color: var(--white);
+    scale: .8; 
+}
+
+/* -----------------main----------------- */
+main{
+    padding: 1.5em;
+}
+
+#span__cyan{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--cyan);
+    font-size: 1.1em;
+}
+.greeting{
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8em;
+    color: var(--cyan);
+
+}
+.profession{
+    font-family: 'Fira Code', monospace;
+    font-size: .7em;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    background-color: var(--green);
+    padding: .1em .2em;
+    border-radius: .2em;
+}
+
+.btn-contact{
+    display: block;
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    margin-top: .25em;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    padding: .5em;
+    background-color: rgb(0,0,0,0);
+    border-radius: .25em;
+    transition: 250ms;
+}
+.btn-contact:hover{
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+.btn-contact:active{
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background-color: var(--white);
+    cursor: pointer;
+    scale: .9;
+}
+.cnt-photo{
+    display: none;
+}
+
+.h3__title{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--cyan);
+}
+
+.sections{
+    margin-top: 2em;
+}
+.aboutme__p{
+    margin-top: .5em;
+}
+.aboutme__p-1{
+
+    margin: .25em 0;
+    color: var(--text-grey);
+}
+.aboutme__p-2{
+    font-size: .9em;
+    color: var(--text-grey);
+    margin-top: 1em;
+    text-align: right;
+}
+.aboutme__p-2>a{
+    color: var(--cyan);
+}
+
+.cnt__icons{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.cnt__icons__tech{
+    display: flex;
+    justify-content: space-evenly;
+    gap: .25em;
+    flex-wrap: wrap;
+}
+.icon__tech{
+   
+    width: 48px;
+    transition: all 250ms;
+}
+
+.cnt__proyects{
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(21, 50px);
+    background-color: var(--dark);
+    border-radius: 1.5em;    
+    grid-gap: .5em 0em;
+}
+.proyect-1{
+    background-color: blue;
+    border-radius: .5em;
+    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.proyect-2{
+    background-color: green;
+    border-radius: .5em;
+    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+.proyect-3{
+    background-color: yellow;
+    border-radius: .5em;
+    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 7;
+    grid-row-end: 12;
+}
+.proyect-4{
+    background-color: rgb(107, 107, 184);
+    border-radius: .5em;
+    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 12;
+    grid-row-end: 15;
+}
+.proyect-5{
+    background-color: rgb(202, 111, 182);
+    border-radius: .5em;
+    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 15;
+    grid-row-end: 20;
+}
+.proyect-6{
+    background-color: rgb(71, 149, 163);
+    border-radius: .5em;
+    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 20;
+    grid-row-end: 22;
+    margin-right: .25em;
+}
+.proyect-7{
+    background-color: rgb(143, 177, 49);
+    border-radius: .5em;
+    padding: 1em;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 20;
+    grid-row-end: 22;
+    margin-left: .25em;
+}
+
+/* -----------------------------Estilos móvil----------------------------- */
+
+/* -----------------------------Estilos tableta----------------------------- */
+
+/* -----------------------------Estilos sobremesa----------------------------- */

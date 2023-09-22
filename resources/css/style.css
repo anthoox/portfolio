@@ -65,7 +65,7 @@ header{
     scale: .9; 
 }
 .header__logo__movil--ligth{
-    width: 50px;
+    width: 110px;
     transition: 500ms;
 }
 .header__logo__movil--ligth:hover{
@@ -154,7 +154,7 @@ h1{
     margin-top: .5em;
     margin-bottom: .5em;
     background-color: var(--green);
-    padding: .1em .2em;
+    padding: .15em .3em;
     border-radius: .2em;
 }
 
@@ -306,6 +306,118 @@ h1{
     margin-left: .25em;
 }
 
+.contact__p{
+    margin-top: .5em;
+    margin-bottom: -.5em;
+}
+.cnt__input{
+    height: 50px;
+}
+.cnt__input--1{
+    position: relative;
+}
+.cnt__input--2{
+    position: relative;
+}
+.cnt__input--3{
+    position: relative;
+}
+.form__label{
+    margin-left: 0.5em;
+    position: absolute;
+    transition: 250ms;
+    top: 50%;
+    color: var(--text-dark);
+}
+/* En JS hay que configurar que cuando se selecione un input el form_label
+ vaya a 0, tenga otro tamaño y color */
+
+.form__input{
+    margin-bottom: 1em;
+    padding: .5em;
+    width: 100%;
+    color: var(--white);
+    background-color: rgb(143, 177, 49, 0);
+    border: 0px solid rgb(0,0,0,0);
+    border-bottom: 1px solid var(--cyan);
+}
+.form__input:focus{
+    outline: none;
+}
+.form__cnt__btn{
+    display: flex;
+    justify-content: center;
+}
+.form__btn--enviar{
+    margin-top: 1em;
+    padding: .5em 1em;
+    display: block;
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    padding: .5em;
+    background-color: rgb(0,0,0,0);
+    border-radius: .25em;
+    transition: 250ms;
+}
+.form__btn--enviar:hover{
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+.form__btn--enviar:active{
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background-color: var(--white);
+    cursor: pointer;
+    scale: .9;
+}
+.btn__up{
+    background-color: rgb(0,0,0,0);
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    padding: .5em;
+    border-radius: .25em;
+    transition: 250ms;
+    display: none;
+}
+.btn__up:hover{
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+.btn__up:active{
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background-color: var(--white);
+    cursor: pointer;
+    scale: .9;
+}
+
+
+footer{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: .9em;
+}
+footer>p{
+    margin-bottom: .5em;
+    color: var(--text-grey);
+}
+footer>p>a{
+
+    color: var(--text-grey);
+}
+.footer__logo{
+    width: 60px;
+    
+}
 /* -----------------------------Estilos móvil----------------------------- */
 
 /* -----------------------------Estilos tableta----------------------------- */

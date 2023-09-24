@@ -17,15 +17,15 @@
 
 <body id="home">
 
-    <header>
-        <div><a class="p" href="#home"><img src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web"
-                    class="header__logo__movil--ligth"></a></div>
+    <header class="header__movil">
+        <div><a href="#home"><img src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web" class="header__logo"></a>
+        </div>
         <div>
             <i class="header__icon las la-bars"></i>
         </div>
     </header>
     <!-- Nav para movil -->
-    <nav>
+    <nav class="header__movil--nav">
         <ul>
             <li><a href="#hombe"><i class="las la-home"></i><span>Inicio</span></a></li>
             <li><a href="#aboutme"><i class="las la-user"></i><span>Sobre mí</span></a></li>
@@ -37,27 +37,52 @@
 
     </nav>
 
+    <header class="header__desktop">
+        <div><a href="#home"><img src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web" class="header__logo"></a>
+        </div>
+        <nav class="header__desktop--nav">
+            <ul>
+                <li><a href="#aboutme"><span class="desktop__nav__element">Sobre mí</span></a></li>
+                <li><a href="#tech"><span class="desktop__nav__element">Tecnologías</span></a></li>
+                <li><a href="#proyects"></i><span class="desktop__nav__element">Proyectos</span></a></li>
+            </ul>
+        </nav>
+
+        <button class="header__desktop__btn"><a class="" href="#contact">Contacto</a></button>
+
+    </header>
+
     <main>
         <!-- sección de inicio -->
-        <section>
+        <section class="home">
             <div>
                 <p class="greeting"><span id="span__cyan"><strong>¡</strong></span>Hola<span
                         id="span__cyan"><strong>!</strong></span></p>
                 <h1 class="name">Soy Anthony Alegría</h1>
                 <h6 class="profession">Desarrollador de aplicaciones web</h6>
-                <button class="btn-contact">Contactame</button>
-            </div>
-            <div class="cnt-photo">
-                <img src="" alt="Fotografía del desarrollador">
-                <div>
-                    <a href="">LinkedIn</a>
-                    <a href="">GitHub</a>
-                    <a href="">email</a>
+
+                <button class="btn__contact">Contactame</button>
+                <div class="cnt__social--movil">
+                    <a class="cnt__social--movil--icon" href=""><i class="lab la-linkedin-in"></i></a>
+                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-github"></i></a>
+                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-codepen"></i></i></a>
                 </div>
             </div>
 
+            <div class="cnt__photo__social">
+                <div class="cnt__photo">
+                    <img class="cnt__photo--photo" src="/resources/img/foto/sin fond (3).png"
+                        alt="Fotografía del desarrollador">
+                </div>
+
+                <div class="cnt__social">
+                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-linkedin-in"></i></a>
+                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-github"></i></a>
+                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-codepen"></i></i></a>
+                </div>
+            </div>
         </section>
-        <!-- sección sobre mí -->
+
         <section class="sections" id="aboutme">
             <!-- Pequeña biografía, como una reseña. Me llamo tal soy tal me gusta esto he trabajado en esto y me destaco en esto. 8 o 10 líneas -->
             <h3 class="h3__title aboutme__title">Sobre mi</h3>
@@ -71,46 +96,31 @@
             <p><span id="span__cyan">¡</span>Gracias por visitar mi portfolio y espero que disfrutes explorando mi
                 trabajo<span id="span__cyan">!</span></p>
             <!-- En un futuro añadir un apartado de conoceme más dando enlaces a Notion donde se muestre más información sobre mí -->
-            <p class="aboutme__p-2">Puedes conocerme más por <a href="#">aquí</a></p>
+            <!-- <p class="aboutme__p-2">Puedes conocerme más por <a href="#">aquí</a></p> -->
         </section>
-        <!-- sección de tecnologías que conozco -->
         <section class="sections" id="tech">
-            <!-- Iconos de las tecnologias que conozco HTML5, CSS, PHP, JavaScript, Bootstrap, MySQL, WordPress, VSCode, Git -->
             <h3 class="h3__title">Tecnologías</h3>
             <div class="cnt__icons">
-                <!-- iconos -->
+
                 <div class="cnt__icons__tech">
-                    <!-- html, css, bootstrap, mysql-->
                     <img class="icon__tech " src="/resources/img/iconos/html.svg" alt="icono de HTML5">
                     <img class="icon__tech " src="/resources/img/iconos/css.svg" alt="icono de CSS">
-                    <img class="icon__tech " src="/resources/img/iconos/bootstap.svg" alt="icono de Bootstrap">
-                    <img class="icon__tech " src="/resources/img/iconos/mysql.svg" alt="icono de MySQL">
                     <img class="icon__tech " src="/resources/img/iconos/php.svg" alt="icono de PHP">
                     <img class="icon__tech " src="/resources/img/iconos/js.svg" alt="icono de JavaScript">
                 </div>
-                <!-- <div class="cnt__icons__tech">
-                  
-                    
-                    
-                </div> -->
                 <div class="cnt__icons__tech">
-                    <!--  wordpress, VScode, Figma, canva-->
+                    <img class="icon__tech " src="/resources/img/iconos/bootstap.svg" alt="icono de Bootstrap">
                     <img class="icon__tech " src="/resources/img/iconos/git.svg" alt="icono de Git">
-                    <img class="icon__tech " src="/resources/img/iconos/github.svg" alt="icono de GitHub">
+                    <img class="icon__tech " src="/resources/img/iconos/mysql.svg" alt="icono de MySQL">
                     <img class="icon__tech " src="/resources//img/iconos/wordpress.svg" alt="icono de WordPress">
-                    <img class="icon__tech " src="/resources/img/iconos/vsc.svg" alt="icono de VSCode">
-                    <img class="icon__tech " src="/resources/img/iconos/canva.svg" alt="icono de Canva">
-                    <img class="icon__tech " src="/resources/img/iconos/figma.svg" alt="icono de Figma">
                 </div>
             </div>
         </section>
         <!-- sección de proyectos -->
         <section class="sections" id="proyects">
-            <!-- Marco de proyectos usando el estilo bento columns. Empezaré poniendo imágenes de los proyectos de codepen hasta que los tenga en mi propio dominio. Aquí incluire mi CV -->
             <h3 class="h3__title">Proyectos</h3>
             <div class="cnt__proyects">
                 <!-- proyectos -->
-                <!-- Formulario, CV, Lista Simple, Landing Page, dados, HTML, Alan turing -->
                 <div class="proyect-1">proyecto1</div>
                 <div class="proyect-2">proyecto2</div>
                 <div class="proyect-3">proyecto3</div>
@@ -123,27 +133,28 @@
         <!-- sección de contacto -->
         <section class="sections" id="contact">
             <h3 class="h3__title">Contacto</h3>
-            <!-- Sección de contacto con un breve formulario que pida nombre, email y comentarios -->
-            <p class="contact__p"><span id="span__cyan">¡</span>Hablemos<span id="span__cyan">!</span> Estoy a un
-                formulario de distancia.</p>
-            <form class="form" action="">
-                <div class="cnt__input cnt__input--1">
-                    <label class="form__label" for="name">Nombre</label><br>
-                    <input class="form__input" type="text" name="name" required>
-                </div>
-                <div class="cnt__input cnt__input--2">
-                    <label class="form__label" for="name">Email</label><br>
-                    <input class="form__input" type="text" name="email" required>
-                </div>
-                <div class="cnt__input cnt__input--3">
-                    <label class="form__label" for="name">Mensaje</label><br>
-                    <input class="form__input" type="text" name="Mensaje" required>
-                </div>
-                <div class="form__cnt__btn">
-                    <button class="form__btn--enviar">Enviar</button>
-                </div>
+            <div class="cnt__form">
+                <p class="contact__p"><span id="span__cyan">¡</span>Hablemos<span id="span__cyan">!</span> Estoy a un
+                    formulario de distancia.</p>
+                <form class="form" action="">
+                    <div class="cnt__input cnt__input--1">
+                        <label class="form__label" for="name">Nombre</label><br>
+                        <input class="form__input" type="text" name="name" required>
+                    </div>
+                    <div class="cnt__input cnt__input--2">
+                        <label class="form__label" for="name">Email</label><br>
+                        <input class="form__input" type="text" name="email" required>
+                    </div>
+                    <div class="cnt__input cnt__input--3">
+                        <label class="form__label" for="name">Mensaje</label><br>
+                        <input class="form__input" type="text" name="Mensaje" required>
+                    </div>
+                    <div class="form__cnt__btn">
+                        <button class="form__btn--enviar">Enviar</button>
+                    </div>
 
-            </form>
+                </form>
+            </div>
         </section>
         <button class="btn__up "><i class="las la-angle-up"></i></button>
     </main>

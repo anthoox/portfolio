@@ -20,6 +20,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* transition: all 250ms; */
 }
 html{
     font-size: 16px;
@@ -44,7 +45,7 @@ body{
 /* -----------------------------Estilos móvil pequeño----------------------------- */
 /* -----------------header y nav----------------- */
 header{
-    padding: 1rem; 
+    padding: 1em .7em; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,30 +53,32 @@ header{
     /* Cuando el usuario baje, que el borde aparezca*/
     /* border-bottom: 1px solid var(--black); */
 }
+.header__desktop{
+    display: none;
+}
 .header__icon{
     font-size: 1.5em;
     cursor: pointer;
     transition: 500ms;
-}
-.header__icon:hover{
-    scale: 1.2;
     color: var(--cyan);
 }
+.header__icon:hover{
+    scale: 1.25;
+    
+}
 .header__icon:active{
+    color: var(--white);
     scale: .9; 
 }
-.header__logo__movil--ligth{
-    width: 110px;
+.header__logo{
+    width: 100px;
     transition: 500ms;
 }
-.header__logo__movil--ligth:hover{
-    scale: 1.2;
-}
-.header__logo__movil--ligth:active{
+.header__logo:active{
     scale: .9;
 }
 
-nav{
+.header__movil--nav{
     background-color: var(--dark);
     padding: 1em;
     width: 120px;
@@ -84,32 +87,32 @@ nav{
     /* Quitado temporalemente hasta configurarlo con JS */
     display: none;
 }
-nav>ul{
+.header__movil--nav>ul{
     display: flex;
     gap: 1em;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-nav>ul>li>a{
+.header__movil--nav>ul>li>a{
     color: var(--cyan);
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: 500ms;
 }
-nav>ul>li>a:hover{
-    scale: 1.2;
+.header__movil--nav>ul>li>a:hover{
+    scale: 1.25;
 }
-nav>ul>li>a:active{
+.header__movil--nav>ul>li>a:active{
     color: var(--white);
     scale: .9; 
 }
-nav>ul>li>a>i{
+.header__movil--nav>ul>li>a>i{
     font-size: 1.25em;
 
 }
-nav>ul>li>a>span{
+.header__movil--nav>ul>li>a>span{
     font-size: .9em;
 }
 .nav__movil--cerrar{
@@ -126,11 +129,28 @@ nav>ul>li>a>span{
     scale: .8; 
 }
 
-/* -----------------main----------------- */
-main{
-    padding: 1.5em;
+.desktop__nav__element{
+    font-size: 1em;
+    color: var(--cyan);
+    display: block;
+    transition: 500ms;
+}
+.desktop__nav__element:hover {
+    color: var(--white);
+}
+.desktop__nav__element:active{
+    scale: .9;
 }
 
+
+
+/* -----------------main----------------- */
+main{
+    padding: 1em;
+}
+.home{
+    transition: all 250ms;
+}
 #span__cyan{
     font-family: 'Quicksand', sans-serif;
     color: var(--cyan);
@@ -148,21 +168,21 @@ h1{
 }
 .profession{
     font-family: 'Fira Code', monospace;
-    font-size: .7em;
-    font-weight: 400;
+    font-size: .75em;
+    font-weight: 300;
     display: inline-block;
-    margin-top: .5em;
+    margin-top: .75em;
     margin-bottom: .5em;
     background-color: var(--green);
-    padding: .15em .3em;
+    padding: .15em .4em;
     border-radius: .2em;
 }
 
-.btn-contact{
+.btn__contact{
     display: block;
     font-family: 'Fira Code', monospace;
     font-weight: 500;
-    margin-top: .25em;
+    margin-top: .5em;
     color: var(--cyan);
     border: 1px solid var(--cyan);
     padding: .5em;
@@ -170,20 +190,39 @@ h1{
     border-radius: .25em;
     transition: 250ms;
 }
-.btn-contact:hover{
+.btn__contact:hover{
     color: var(--white);
     border: 1px solid var(--white);
     background-color: var(--cyan);
     cursor: pointer;
 }
-.btn-contact:active{
+.btn__contact:active{
     color: var(--cyan);
     border: 1px solid var(--cyan);
     background-color: var(--white);
     cursor: pointer;
     scale: .9;
 }
-.cnt-photo{
+
+.cnt__social--movil--icon{
+    color: var(--green);
+    font-size: 1.75em;
+    cursor: pointer;
+}
+.cnt__social--movil--icon>i{
+    transition: 250ms;
+}
+.cnt__social--movil--icon>i:hover{
+    color: var(--cyan);
+    scale: 1.25;
+}
+.cnt__social--movil--icon>i:active{
+    scale: .9;
+}
+.cnt__photo{
+    display: none;
+}
+.cnt__social{
     display: none;
 }
 
@@ -193,10 +232,10 @@ h1{
 }
 
 .sections{
-    margin-top: 2em;
+    margin-top: 2.5em;
 }
 .aboutme__p{
-    margin-top: .5em;
+    margin-top: 1em;
 }
 .aboutme__p-1{
 
@@ -214,6 +253,7 @@ h1{
 }
 
 .cnt__icons{
+    margin-top: .5em;
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -227,18 +267,18 @@ h1{
 }
 .icon__tech{
    
-    width: 48px;
+    width: 45px;
     transition: all 250ms;
 }
 
 .cnt__proyects{
-    margin-top: 1em;
+    margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(21, 50px);
-    background-color: var(--dark);
     border-radius: 1.5em;    
     grid-gap: .5em 0em;
+    transition: all 250ms;
 }
 .proyect-1{
     background-color: blue;
@@ -248,6 +288,7 @@ h1{
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 4;
+    transition: all 250ms;
 }
 .proyect-2{
     background-color: green;
@@ -257,6 +298,7 @@ h1{
     grid-column-end: 6;
     grid-row-start: 4;
     grid-row-end: 7;
+    transition: all 250ms;
 }
 .proyect-3{
     background-color: yellow;
@@ -266,6 +308,7 @@ h1{
     grid-column-end: 6;
     grid-row-start: 7;
     grid-row-end: 12;
+    transition: all 250ms;
 }
 .proyect-4{
     background-color: rgb(107, 107, 184);
@@ -275,6 +318,7 @@ h1{
     grid-column-end: 6;
     grid-row-start: 12;
     grid-row-end: 15;
+    transition: all 250ms;
 }
 .proyect-5{
     background-color: rgb(202, 111, 182);
@@ -284,6 +328,7 @@ h1{
     grid-column-end: 6;
     grid-row-start: 15;
     grid-row-end: 20;
+    transition: all 250ms;
 }
 .proyect-6{
     background-color: rgb(71, 149, 163);
@@ -294,6 +339,7 @@ h1{
     grid-row-start: 20;
     grid-row-end: 22;
     margin-right: .25em;
+    transition: all 250ms;
 }
 .proyect-7{
     background-color: rgb(143, 177, 49);
@@ -304,16 +350,25 @@ h1{
     grid-row-start: 20;
     grid-row-end: 22;
     margin-left: .25em;
+    transition: all 250ms;
 }
 
+
 .contact__p{
-    margin-top: .5em;
+    margin-top: 1em;
     margin-bottom: -.5em;
+    text-align: center;
+}
+.form{
+    max-width: 688px;
+    margin: auto;
 }
 .cnt__input{
     height: 50px;
+    margin-bottom: 1em;
 }
 .cnt__input--1{
+    margin-top: .5em;
     position: relative;
 }
 .cnt__input--2{
@@ -331,9 +386,7 @@ h1{
 }
 /* En JS hay que configurar que cuando se selecione un input el form_label
  vaya a 0, tenga otro tamaño y color */
-
 .form__input{
-    margin-bottom: 1em;
     padding: .5em;
     width: 100%;
     color: var(--white);
@@ -399,7 +452,7 @@ h1{
 
 
 footer{
-    padding: 1em;
+    padding: 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -416,10 +469,231 @@ footer>p>a{
 }
 .footer__logo{
     width: 60px;
-    
+    margin-bottom: .5em;
 }
 /* -----------------------------Estilos móvil----------------------------- */
+@media screen and (min-width:576px){
+    
 
+    header{
+        padding: 1.5em;
+    }
+    .header__logo{
+        width: 110px;
+    }
+    main{
+        padding: 2em;
+    }
+    .home{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cnt__social--movil{
+        display: none;
+    }
+    .cnt__photo{
+        display: block;
+        border: 1px solid var(--green);
+        background-color: var(--green);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cnt__photo--photo{
+        width: 170px;
+        border-radius: 50%;
+    }
+    .cnt__social{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: .5em;
+        border: 1px solid var(--green);
+        border-radius: 1em;
+    }
+    .name{
+        font-size: 2em;
+    }
+    .profession{
+        font-size: .8em;
+    }
+    .cnt__proyects{
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(13, 50px);
+    }
+    .proyect-1{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .proyect-2{
+        grid-column-start: 6;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        margin-left: .5em;
+    }
+    .proyect-3{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 9;
+    }
+    .proyect-4{
+        grid-column-start: 6;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 7;
+        margin-left: .5em;
+    }
+    .proyect-5{
+        grid-column-start: 6;
+        grid-column-end: 11;
+        grid-row-start: 7;
+        grid-row-end: 12;
+        margin-left: .5em;
+    }
+    .proyect-6{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 9;
+        grid-row-end: 12;
+        margin-right: 0em;
+    }
+    .proyect-7{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 12;
+        grid-row-end: 14;
+        margin-left: 0em;
+    }
+}
 /* -----------------------------Estilos tableta----------------------------- */
+@media screen and (min-width:768px){
 
+    main{
+        padding: 2.5em;
+        max-width: 986px;
+        margin: auto;
+    }
+ 
+    .name{
+        font-size: 2.5em;
+    }
+   
+    .cnt__photo{
+        border: 2px solid var(--green);
+    }
+    .cnt__photo--photo{
+        width: 200px;
+    }
+    .cnt__social{
+        border: 2px solid var(--green);
+    }
+
+    .cnt__proyects{
+        grid-template-columns: repeat(20, 5%);
+        grid-template-rows: repeat(9, 50px);
+    }
+    .proyect-1{
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .proyect-2{
+        grid-column-start: 7;
+        grid-column-end: 14;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        margin-left: .5em;
+    }
+    .proyect-3{
+        grid-column-start: 14;
+        grid-column-end: 21;
+        grid-row-start: 1;
+        grid-row-end: 7;
+        margin-left: .5em;
+    }
+    .proyect-4{
+        grid-column-start: 8;
+        grid-column-end: 14;
+        grid-row-start: 4;
+        grid-row-end: 7;
+        margin-left: .5em;
+
+    }
+    .proyect-5{
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 4;
+        grid-row-end: 10;
+        margin-left: 0em;
+    }
+    .proyect-6{
+        grid-column-start: 8;
+        grid-column-end: 15;
+        grid-row-start: 7;
+        grid-row-end: 10;
+        margin-left: .5em;
+    }
+    .proyect-7{
+        grid-column-start: 15;
+        grid-column-end: 21;
+        grid-row-start: 7;
+        grid-row-end: 10;
+        margin-left: .5em;
+    }
+}
+
+@media screen and (min-width:992px){
+    .header__movil{
+        display: none;
+    }
+    .header__desktop{
+        display: block;
+        padding: 1.5em;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__logo{
+        width: 120px;
+    }
+    .header__desktop--nav>ul{
+        display: flex;
+        gap: 3em;
+    }
+    .header__desktop__btn{
+        font-family: 'Fira Code', monospace;
+        font-weight: 500;
+        margin-top: .5em;
+        border: 1px solid var(--cyan);
+        padding: .5em 1em;
+        background-color: var(--cyan);
+        border-radius: .25em;
+        transition: 250ms;
+        cursor: pointer;
+    }
+    .header__desktop__btn>a{
+        color: var(--bg-dark);
+   
+    }
+    .header__desktop__btn>a:hover{
+        color: var(--white);
+   
+    }
+    .header__desktop__btn:active{
+        background-color: var(--white);
+        scale: .9;
+    }
+    .header__desktop__btn>a:active{
+        color: var(--cyan);
+        
+        
+    }
+  
+
+}
 /* -----------------------------Estilos sobremesa----------------------------- */

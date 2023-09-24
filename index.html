@@ -42,6 +42,7 @@
         </div>
         <nav class="header__desktop--nav">
             <ul>
+                <li><a href="#home"><span class="desktop__nav__element">Inicio</span></a></li>
                 <li><a href="#aboutme"><span class="desktop__nav__element">Sobre mí</span></a></li>
                 <li><a href="#tech"><span class="desktop__nav__element">Tecnologías</span></a></li>
                 <li><a href="#proyects"></i><span class="desktop__nav__element">Proyectos</span></a></li>
@@ -61,25 +62,18 @@
                 <h1 class="name">Soy Anthony Alegría</h1>
                 <h6 class="profession">Desarrollador de aplicaciones web</h6>
 
-                <button class="btn__contact">Contactame</button>
+
                 <div class="cnt__social--movil">
                     <a class="cnt__social--movil--icon" href=""><i class="lab la-linkedin-in"></i></a>
                     <a class="cnt__social--movil--icon" href=""><i class=" lab la-github"></i></a>
                     <a class="cnt__social--movil--icon" href=""><i class=" lab la-codepen"></i></i></a>
                 </div>
+                <button class="btn__contact">Contactame</button>
             </div>
 
-            <div class="cnt__photo__social">
-                <div class="cnt__photo">
-                    <img class="cnt__photo--photo" src="/resources/img/foto/sin fond (3).png"
-                        alt="Fotografía del desarrollador">
-                </div>
-
-                <div class="cnt__social">
-                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-linkedin-in"></i></a>
-                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-github"></i></a>
-                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-codepen"></i></i></a>
-                </div>
+            <div class="cnt__photo">
+                <img class="cnt__photo--photo" src="/resources/img/foto/sin fond (3).png"
+                    alt="Fotografía del desarrollador">
             </div>
         </section>
 
@@ -95,27 +89,9 @@
                 desafío.</p>
             <p><span id="span__cyan">¡</span>Gracias por visitar mi portfolio y espero que disfrutes explorando mi
                 trabajo<span id="span__cyan">!</span></p>
-            <!-- En un futuro añadir un apartado de conoceme más dando enlaces a Notion donde se muestre más información sobre mí -->
-            <!-- <p class="aboutme__p-2">Puedes conocerme más por <a href="#">aquí</a></p> -->
+            <p class="aboutme__p-2">Puedes conocerme más por <a href="#">aquí</a></p>
         </section>
-        <section class="sections" id="tech">
-            <h3 class="h3__title">Tecnologías</h3>
-            <div class="cnt__icons">
 
-                <div class="cnt__icons__tech">
-                    <img class="icon__tech " src="/resources/img/iconos/html.svg" alt="icono de HTML5">
-                    <img class="icon__tech " src="/resources/img/iconos/css.svg" alt="icono de CSS">
-                    <img class="icon__tech " src="/resources/img/iconos/php.svg" alt="icono de PHP">
-                    <img class="icon__tech " src="/resources/img/iconos/js.svg" alt="icono de JavaScript">
-                </div>
-                <div class="cnt__icons__tech">
-                    <img class="icon__tech " src="/resources/img/iconos/bootstap.svg" alt="icono de Bootstrap">
-                    <img class="icon__tech " src="/resources/img/iconos/git.svg" alt="icono de Git">
-                    <img class="icon__tech " src="/resources/img/iconos/mysql.svg" alt="icono de MySQL">
-                    <img class="icon__tech " src="/resources//img/iconos/wordpress.svg" alt="icono de WordPress">
-                </div>
-            </div>
-        </section>
         <!-- sección de proyectos -->
         <section class="sections" id="proyects">
             <h3 class="h3__title">Proyectos</h3>
@@ -129,6 +105,45 @@
                 <div class="proyect-6">proyecto6</div>
                 <div class="proyect-7">proyecto7</div>
             </div>
+        </section>
+
+        <section class="sections" id="tech">
+            <h3 class="h3__title">Tecnologías</h3>
+            <div class="cnt__tech">
+                <div class="tech__col">
+                    <h5>Maquetación</h5>
+                    <div class="cnt__tech__child">
+                        <img class="icon__tech " src="/resources/img/iconos/html.svg" alt="icono de HTML5">
+                        <img class="icon__tech " src="/resources/img/iconos/css.svg" alt="icono de CSS">
+
+                        <img class="icon__tech " src="/resources/img/iconos/bootstap.svg" alt="icono de Bootstrap">
+                    </div>
+                </div>
+
+                <div class="tech__col">
+                    <h5>Lenguajes</h5>
+                    <div class="cnt__tech__child">
+                        <img class=" icon__tech " src=" /resources/img/iconos/php.svg" alt="icono de PHP">
+                        <img class="icon__tech " src="/resources/img/iconos/js.svg" alt="icono de JavaScript">
+                    </div>
+                </div>
+
+                <div class="tech__col">
+                    <h5>Bases de datos</h5>
+                    <div class="cnt__tech__child">
+                        <img class=" icon__tech " src=" /resources/img/iconos/mysql2.svg" alt="icono de MySQL">
+                        <img class=" icon__tech " src=" /resources/img/iconos/mariadb.svg" alt="icono de MySQL">
+                    </div>
+                </div>
+
+                <div class="tech__col">
+                    <h5>Otros</h5>
+                    <div class="cnt__tech__child">
+                        <img class="icon__tech " src="/resources/img/iconos/git.svg" alt="icono de Git">
+                    </div>
+
+                </div>
+
         </section>
         <!-- sección de contacto -->
         <section class="sections" id="contact">
@@ -161,7 +176,7 @@
     <footer>
         <div><img class="footer__logo" src="/resources/img/logo/mo_logo_cyan_f2.png" alt=""></div>
         <p>Anthony Alegría Alcántara | Desarrollador de aplicaciones web</p>
-        <p><a href="">Aviso legal</a> | <a href="">Política de privacidad</a></p>
+        <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
         <p> &#169 2023 anthoox</p>
     </footer>
 </body>

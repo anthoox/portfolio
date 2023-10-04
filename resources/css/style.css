@@ -16,6 +16,9 @@
     --red: #ff0000;    
   }
 /* Configuración general */
+[id]{
+    scroll-margin-top: 3ex;
+}
 *{
     padding: 0;
     margin: 0;
@@ -44,19 +47,24 @@ body{
 
 /* -----------------------------Estilos móvil pequeño----------------------------- */
 /* -----------------header y nav----------------- */
-header{
+
+.header__desktop{
+    padding: 0;
+    margin: 0;
+    display: none;
+    border-bottom: 1px solid cyan;
+    /* Cuando el usuario baje, que el borde aparezca*/
+    /* border-bottom: 1px solid var(--black); */
+}
+
+.header__desktop--div{
+    display: none;
     padding: 1em .7em; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: auto;
-    
-    /* Cuando el usuario baje, que el borde aparezca*/
-    /* border-bottom: 1px solid var(--black); */
-}
-.header__desktop{
-    display: none;
 }
 .header__icon{
     font-size: 1.5em;
@@ -79,7 +87,12 @@ header{
 .header__logo:active{
     scale: .9;
 }
-
+.header__movil{
+    padding: 1em;
+    border-bottom: 1px solid cyan;
+    display: flex;
+    justify-content: space-between;
+}
 .header__movil--nav{
     background-color: var(--dark);
     padding: 1em;
@@ -191,6 +204,7 @@ h1{
     background-color: rgb(0,0,0,0);
     border-radius: .25em;
     transition: 250ms;
+    
 }
 .btn__contact:hover{
     color: var(--white);
@@ -229,7 +243,35 @@ h1{
     scale: .9;
 }
 .cnt__photo{
+    transition: all 500ms;
+    opacity: .9;
     display: none;
+    background: linear-gradient(30deg, #1dd1a1 0%, #00d2d3 100% );
+    box-shadow:
+    1px 5.9px 28.1px rgba(0, 0, 0, 0.054),
+    2px 11.5px 42.5px rgba(0, 0, 0, 0.078),
+    3.1px 17.6px 52.2px rgba(0, 0, 0, 0.097),
+    4.3px 24.9px 60.7px rgba(0, 0, 0, 0.113),
+    6.1px 34.9px 70.8px rgba(0, 0, 0, 0.132),
+    8.9px 51.2px 87.1px rgba(0, 0, 0, 0.156),
+    16px 92px 134px rgba(0, 0, 0, 0.21)
+  ;
+
+}
+
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+
+        
+.cnt__photo:hover{
+    
+    opacity: 1;
+    scale: 1.01;
+ 
 }
 
 .h3__title{
@@ -592,6 +634,8 @@ footer>p>a{
     }
     
     .cnt__photo{
+        /* width: 170px;
+        height: 170px; */
         display: block;
         border: 1px solid var(--green);
         background-color: var(--green);
@@ -760,6 +804,8 @@ footer>p>a{
     }
     .header__desktop{
         display: block;
+    }
+    .header__desktop--div{
         padding: 1.5em;
         display: flex;
         justify-content: space-between;
@@ -781,6 +827,7 @@ footer>p>a{
         border-radius: .25em;
         transition: 250ms;
         cursor: pointer;
+        
     }
     .header__desktop__btn:hover{
         border: 1px solid var(--white);
@@ -808,6 +855,7 @@ footer>p>a{
     main{
         padding: 4em;
     }
+ 
     .cnt__photo--photo{
         width: 250px;
     }

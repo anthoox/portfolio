@@ -29,8 +29,8 @@
         <ul>
             <li><a href="#hombe"><i class="las la-home"></i><span>Inicio</span></a></li>
             <li><a href="#aboutme"><i class="las la-user"></i><span>Sobre mí</span></a></li>
-            <li><a href="#tech"><i class="las la-laptop-code"></i><span>Tecnologías</span></a></li>
             <li><a href="#proyects"><i class="las la-project-diagram"></i></i><span>Proyectos</span></a></li>
+            <li><a href="#tech"><i class="las la-laptop-code"></i><span>Tecnologías</span></a></li>
             <li><a href="#contact"><i class="las la-headset"></i><span>Contacto</span></a></li>
             <li><i class="nav__movil--cerrar las la-times"></i></li>
         </ul>
@@ -38,18 +38,22 @@
     </nav>
 
     <header class="header__desktop">
-        <div><a href="#home"><img src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web" class="header__logo"></a>
-        </div>
-        <nav class="header__desktop--nav">
-            <ul>
-                <li><a href="#home"><span class="desktop__nav__element">Inicio</span></a></li>
-                <li><a href="#aboutme"><span class="desktop__nav__element">Sobre mí</span></a></li>
-                <li><a href="#tech"><span class="desktop__nav__element">Tecnologías</span></a></li>
-                <li><a href="#proyects"></i><span class="desktop__nav__element">Proyectos</span></a></li>
-            </ul>
-        </nav>
+        <div class="header__desktop--div">
+            <div><a href="#home"><img src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web"
+                        class="header__logo"></a>
+            </div>
+            <nav class="header__desktop--nav">
+                <ul>
+                    <li><a href="#home"><span class="desktop__nav__element">Inicio</span></a></li>
+                    <li><a href="#aboutme"><span class="desktop__nav__element">Sobre mí</span></a></li>
+                    <li><a href="#tech"><span class="desktop__nav__element">Tecnologías</span></a></li>
+                    <li><a href="#proyects"></i><span class="desktop__nav__element">Proyectos</span></a></li>
+                </ul>
+            </nav>
 
-        <button class="header__desktop__btn"><a class="" href="#contact">Contacto</a></button>
+            <button class="header__desktop__btn"><a class="" href="#contact">Contacto</a></button>
+        </div>
+
 
     </header>
 
@@ -64,15 +68,19 @@
 
 
                 <div class="cnt__social--movil">
-                    <a class="cnt__social--movil--icon" href=""><i class="lab la-linkedin-in"></i></a>
-                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-github"></i></a>
-                    <a class="cnt__social--movil--icon" href=""><i class=" lab la-codepen"></i></i></a>
+                    <a class="cnt__social--movil--icon"
+                        href="https://www.linkedin.com/in/anthony-alegr%C3%ADa-alc%C3%A1ntara-58920a233/"
+                        target="_blank"><i class="lab la-linkedin-in"></i></a>
+                    <a class="cnt__social--movil--icon" href="https://github.com/anthoox" target="_blank"><i
+                            class=" lab la-github"></i></a>
+                    <a class="cnt__social--movil--icon" href="https://codepen.io/your-work/" target="_blank"><i
+                            class=" lab la-codepen"></i></i></a>
                 </div>
                 <button class="btn__contact">Contactame</button>
             </div>
 
             <div class="cnt__photo">
-                <img class="cnt__photo--photo" src="/resources/img/foto/sin fond (3).png"
+                <img class="cnt__photo--photo" src="resources/img/foto/sin fond (3).png"
                     alt="Fotografía del desarrollador">
             </div>
         </section>
@@ -113,35 +121,27 @@
                 <div class="tech__col">
                     <h5>Maquetación</h5>
                     <div class="cnt__tech__child">
-                        <img class="icon__tech " src="/resources/img/iconos/html.svg" alt="icono de HTML5">
-                        <img class="icon__tech " src="/resources/img/iconos/css.svg" alt="icono de CSS">
+                        <img class="icon__tech " src="resources/img/iconos/html.svg" alt="icono de HTML5">
+                        <img class="icon__tech " src="resources/img/iconos/css.svg" alt="icono de CSS">
 
-                        <img class="icon__tech " src="/resources/img/iconos/bootstap.svg" alt="icono de Bootstrap">
+                        <img class="icon__tech " src="resources/img/iconos/bootstap.svg" alt="icono de Bootstrap">
                     </div>
                 </div>
 
                 <div class="tech__col">
                     <h5>Lenguajes</h5>
                     <div class="cnt__tech__child">
-                        <img class=" icon__tech " src=" /resources/img/iconos/php.svg" alt="icono de PHP">
-                        <img class="icon__tech " src="/resources/img/iconos/js.svg" alt="icono de JavaScript">
+                        <img class=" icon__tech " src=" resources/img/iconos/php.svg" alt="icono de PHP">
+                        <img class="icon__tech " src="resources/img/iconos/js.svg" alt="icono de JavaScript">
                     </div>
                 </div>
 
                 <div class="tech__col">
                     <h5>Bases de datos</h5>
                     <div class="cnt__tech__child">
-                        <img class=" icon__tech " src=" /resources/img/iconos/mysql2.svg" alt="icono de MySQL">
-                        <img class=" icon__tech " src=" /resources/img/iconos/mariadb.svg" alt="icono de MySQL">
+                        <img class=" icon__tech " src=" resources/img/iconos/mysql2.svg" alt="icono de MySQL">
+                        <img class=" icon__tech " src=" resources/img/iconos/mariadb.svg" alt="icono de MySQL">
                     </div>
-                </div>
-
-                <div class="tech__col">
-                    <h5>Otros</h5>
-                    <div class="cnt__tech__child">
-                        <img class="icon__tech " src="/resources/img/iconos/git.svg" alt="icono de Git">
-                    </div>
-
                 </div>
 
         </section>
@@ -174,7 +174,7 @@
         <button class="btn__up "><i class="las la-angle-up"></i></button>
     </main>
     <footer>
-        <div><img class="footer__logo" src="/resources/img/logo/mo_logo_cyan_f2.png" alt=""></div>
+        <div><img class="footer__logo" src="resources/img/logo/mo_logo_cyan_f2.png" alt=""></div>
         <p>Anthony Alegría Alcántara | Desarrollador de aplicaciones web</p>
         <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
         <p> &#169 2023 anthoox</p>

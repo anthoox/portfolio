@@ -44,17 +44,33 @@ ul{
 body{
     background-color: var(--bg-dark);
 }
-
+.position__main{
+    position: relative;
+    top: 100px;
+}
+.position__main2{
+    position: relative;
+    top: 50px;
+}
 /* -----------------------------Estilos móvil pequeño----------------------------- */
 /* -----------------header y nav----------------- */
 
 .header__desktop{
+    transition: all 500ms;
     padding: 0;
     margin: 0;
     display: none;
+    background-color: #222831;
+    z-index: 2000;
+}
+.fixeder_header{
+    transition: all 500ms;
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Coloca el encabezado en la parte superior */
+    left: 0; /* Coloca el encabezado en el lado izquierdo */
+    width: 100%; /* Ancho completo del encabezado */
     border-bottom: 1px solid cyan;
-    /* Cuando el usuario baje, que el borde aparezca*/
-    /* border-bottom: 1px solid var(--black); */
+    opacity: 0.95;
 }
 
 .header__desktop--div{
@@ -65,6 +81,7 @@ body{
     align-items: center;
     max-width: 1200px;
     margin: auto;
+
 }
 .header__icon{
     font-size: 1.5em;
@@ -88,10 +105,12 @@ body{
     scale: .9;
 }
 .header__movil{
-    padding: 1em;
-    border-bottom: 1px solid cyan;
+    padding: 1.5em;
     display: flex;
     justify-content: space-between;
+    transition: all 500ms;
+    background-color: #222831;
+    z-index: 2000;
 }
 .header__movil--nav{
     background-color: var(--dark);
@@ -161,7 +180,7 @@ body{
 
 /* -----------------main----------------- */
 main{
-    padding: 1em;
+    padding: 1.5em;
 }
 .home{
     transition: all 250ms;
@@ -179,7 +198,6 @@ h1{
     font-family: 'Quicksand', sans-serif;
     font-size: 1.8em;
     color: var(--cyan);
-
 }
 .profession{
     font-family: 'Fira Code', monospace;
@@ -625,7 +643,7 @@ footer>p>a{
         width: 110px;
     }
     main{
-        padding: 2em;
+        padding: 3em;
     }
     .home{
         display: flex;

@@ -17,7 +17,7 @@
   }
 /* Configuración general */
 [id]{
-    scroll-margin-top: 3ex;
+    scroll-margin-top: 15ex;
 }
 *{
     padding: 0;
@@ -44,14 +44,7 @@ ul{
 body{
     background-color: var(--bg-dark);
 }
-.position__main{
-    position: relative;
-    top: 100px;
-}
-.position__main2{
-    position: relative;
-    top: 50px;
-}
+
 /* -----------------------------Estilos móvil pequeño----------------------------- */
 /* -----------------header y nav----------------- */
 
@@ -69,8 +62,13 @@ body{
     top: 0; /* Coloca el encabezado en la parte superior */
     left: 0; /* Coloca el encabezado en el lado izquierdo */
     width: 100%; /* Ancho completo del encabezado */
-    border-bottom: 1px solid cyan;
     opacity: 0.95;
+    box-shadow:
+  0.3px 0.9px 2.1px rgba(0, 0, 0, 0.122),
+  0.9px 2.5px 5.8px rgba(0, 0, 0, 0.175),
+  2.1px 6px 13.9px rgba(0, 0, 0, 0.228),
+  7px 20px 46px rgba(0, 0, 0, 0.35)
+;
 }
 
 .header__desktop--div{
@@ -209,7 +207,21 @@ h1{
     background-color: var(--green);
     padding: .15em .4em;
     border-radius: .2em;
+    /* width: 32ch; */
+    /* animation: typing 2s steps(32), blink .5 infinite step-end alternate; */
+    /* overflow: hidden; */
 }
+
+/* @keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+} */
 
 .btn__contact{
     display: block;
@@ -384,20 +396,37 @@ h5{
     grid-gap: .5em 0em;
     
 }
+.proyects{
+    position: relative;
+    overflow: hidden;
+}
 .proyect-1{
-    background-color: blue;
     border-radius: .5em;
-    padding: 1em;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 4;
+}
+.proyects>img{
+    transition: all 250ms;
+    width: 100%;
+    height: auto;
+    border-radius: .5em;
+    opacity: 1;
+    cursor: pointer;
     
 }
+.proyects>img:hover{
+    opacity: .5;
+    transform: scale(1.2);
+}
+.proyects>img:active{
+    opacity: .5;
+    transform: scale(1);
+}
 .proyect-2{
-    background-color: green;
+    background-color: white;
     border-radius: .5em;
-    padding: 1em;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 4;
@@ -405,9 +434,8 @@ h5{
     
 }
 .proyect-3{
-    background-color: yellow;
+    background-color: white;
     border-radius: .5em;
-    padding: 1em;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 7;
@@ -415,9 +443,8 @@ h5{
 
 }
 .proyect-4{
-    background-color: rgb(107, 107, 184);
+    background-color: white;
     border-radius: .5em;
-    padding: 1em;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 12;
@@ -425,9 +452,8 @@ h5{
    
 }
 .proyect-5{
-    background-color: rgb(202, 111, 182);
+    background-color: white;
     border-radius: .5em;
-    padding: 1em;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 15;
@@ -435,9 +461,8 @@ h5{
     
 }
 .proyect-6{
-    background-color: rgb(71, 149, 163);
+    background-color:white;
     border-radius: .5em;
-    padding: 1em;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 20;
@@ -446,9 +471,8 @@ h5{
     
 }
 .proyect-7{
-    background-color: rgb(143, 177, 49);
+    background-color:white;
     border-radius: .5em;
-    padding: 1em;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 20;
@@ -556,6 +580,7 @@ h5{
 
 
 footer{
+    margin-top: 5em;
     padding: 1.5em;
     display: flex;
     flex-direction: column;
@@ -817,6 +842,14 @@ footer>p>a{
 }
 
 @media screen and (min-width:992px){
+
+    .position__main {
+        position: relative;
+        top: 93px;/* Estilos para pantallas mayores a 920px */
+    }
+
+
+
     .header__movil{
         display: none;
     }
@@ -893,6 +926,14 @@ footer>p>a{
     }
   
 }  
+
+
+@media screen and (max-width: 991px) {
+    .position__main2 {
+        position: relative;
+        top: 71.5px;
+    }
+}
 /* -----------------------------Estilos sobremesa----------------------------- */
 @media screen and (min-width:1200px){
     html{

@@ -1,0 +1,505 @@
+:root {
+    --color1: rgb(0, 0, 0);
+    --color2: rgb(228, 251, 255);
+    --color3: rgb(237, 238, 247);
+    --color4: rgb(184, 181, 255);
+    --color5: rgb(120, 104, 230);
+    --color6: rgb(255, 255, 255);
+    --color7: rgb(245, 245, 245);
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: var(--color2);
+
+}
+
+.cabecera {
+    background-color: var(--color5);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-web {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color6);
+}
+
+.main {
+    background-color: var(--color1);
+}
+
+article {
+    width: 100%;
+    min-width: 300px;
+}
+
+.instrucciones {
+    height: 20%;
+    min-height: 200px;
+    width: 100%;
+    background-color: var(--color3);
+    padding: 3em 5em;
+
+}
+
+.cnt-intrucciones {
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.titulo-h2 {
+    font-size: 1.5em;
+}
+
+.instruccion {
+    margin: .5rem 1em 0 2em;
+}
+
+.pista {
+    margin: .5rem 0 0 2.5em;
+}
+
+
+/*--//-----contenedor Juego de dados-----//--*/
+.juego {
+    width: 100%;
+    height: 40%;
+    min-height: 500px;
+    background-color: var(--color4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+}
+
+/*--//-----FIN contenedor Juego de dados-----//--*/
+
+
+/*--//-----Dado 3D-----//--*/
+.cnt-dados {
+    transition: all 250ms;
+    position: relative;
+    margin: auto;
+    perspective: 5000px;
+    perspective-origin: -500px -2000px;
+    background-color: var(--color5);
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow:
+        0px 2.7px 3.7px rgba(120, 104, 230, 0.106),
+        0px 5.3px 8px rgba(120, 104, 230, 0.165),
+        0px 8.1px 14.1px rgba(120, 104, 230, 0.218),
+        0px 11.5px 24.8px rgba(120, 104, 230, 0.278),
+        0px 16px 56px rgba(120, 104, 230, 0.37);
+}
+
+@media (max-width: 578px) {
+
+
+    .cnt-dados {
+        width: 380px;
+    }
+}
+
+@media (max-width: 498px) {
+    .cnt-dados {
+        width: 300px;
+
+    }
+}
+
+
+.cnt-dados:active {
+    scale: 0.9;
+}
+
+.dado-1 {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.lado {
+    position: absolute;
+    margin: auto;
+    width: 100px;
+    border-radius: 10PX;
+    border: 2px solid var(--color1);
+    height: 100px;
+    background-color: var(--color6);
+}
+
+.cnt-puntos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.punto {
+    width: 25px;
+    height: 25px;
+    background-color: var(--color1);
+    border-radius: 50%;
+}
+
+.cnt-puntos-2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.punto-2 {
+    align-self: start;
+}
+
+.punto-2-2 {
+    align-self: end;
+}
+
+
+.cnt-puntos-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cnt {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cnt-punto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lado5 {
+    position: relative;
+}
+
+.punto5 {
+    position: absolute;
+}
+
+.mpunto {
+    margin: 1em;
+}
+
+.mpuntos {
+    margin: -0.5em;
+}
+
+.dado-1 {
+    transition: 0.25s;
+    transform-style: preserve-3d;
+    transform: rotateY(120deg);
+    animation: rotar 4s infinite linear;
+}
+
+
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+
+    }
+
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+
+#cara-1 {
+    transform: translateZ(50px);
+}
+
+#cara-2 {
+    transform: translateX(50px) rotateY(90deg);
+}
+
+#cara-3 {
+    transform: translateZ(-50px);
+}
+
+#cara-4 {
+    transform: translateX(-50px) rotateY(90deg);
+}
+
+#cara-5 {
+    transform: translateY(-50px) rotateX(90deg);
+}
+
+#cara-6 {
+    transform: translateY(-50px) rotateX(90deg);
+}
+
+/*--//-----FIN Dado 3D-----//--*/
+
+
+
+
+
+/*--//-----Dado 2D-----//--*/
+.juego-2d {
+    display: none;
+}
+
+.cnt-dados-2d {
+    transition: all 250ms;
+    position: relative;
+    margin: auto;
+    background-color: var(--color5);
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow:
+        0px 2.7px 3.7px rgba(120, 104, 230, 0.106),
+        0px 5.3px 8px rgba(120, 104, 230, 0.165),
+        0px 8.1px 14.1px rgba(120, 104, 230, 0.218),
+        0px 11.5px 24.8px rgba(120, 104, 230, 0.278),
+        0px 16px 56px rgba(120, 104, 230, 0.37);
+}
+
+.cnt-dados-2d:active {
+    scale: 0.9;
+}
+
+@media (max-width: 578px) {
+
+
+    .cnt-dados-2d {
+        width: 380px;
+    }
+}
+
+@media (max-width: 498px) {
+    .cnt-dados-2d {
+        width: 300px;
+
+    }
+}
+
+.dados-2d {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dado-2d {
+    transition: all 0.25s;
+    z-index: 1;
+}
+
+@keyframes rotar2 {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+
+    16% {
+        transform: rotate(25deg);
+    }
+
+    32% {
+        transform: rotate(0deg);
+    }
+
+    49% {
+        transform: rotate(-25deg);
+    }
+
+    68% {
+        transform: rotate(0deg);
+    }
+
+    84% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*--//-----FIN Dado 2D-----//--*/
+
+
+
+
+
+/*--//-----Botones-----//--*/
+.cnt-botones {
+    width: 100%;
+    margin: auto;
+    margin-top: 1em;
+
+}
+
+.botones,
+.botones2 {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+
+}
+
+button {
+    transition: all 250ms;
+    display: block;
+    margin: auto;
+    padding: 0.5em;
+    width: 100px;
+    height: 45px;
+    color: var(--color5);
+    border-radius: 25px;
+    background-color: var(--color6);
+    z-index: 30;
+    border: 2px solid var(--color4);
+    font-weight: 800;
+    box-shadow:
+        0px 2.7px 3.7px rgba(120, 104, 230, 0.106),
+        0px 5.3px 8px rgba(120, 104, 230, 0.165),
+        0px 8.1px 14.1px rgba(120, 104, 230, 0.218),
+        0px 11.5px 24.8px rgba(120, 104, 230, 0.278),
+        0px 16px 56px rgba(120, 104, 230, 0.37);
+}
+
+:root {
+    --color1: rgb(0, 0, 0);
+    --color2: rgb(228, 251, 255);
+    --color3: rgb(237, 238, 247);
+    --color4: rgb(184, 181, 255);
+    --color5: rgb(120, 104, 230);
+    --color6: rgb(255, 255, 255);
+}
+
+button:hover {
+
+    border: 2px solid var(--color4);
+    width: 120px;
+
+}
+
+button:active {
+    background-color: var(--color3);
+    scale: 0.8;
+
+}
+
+/*--//-----Fin Botones-----//--*/
+
+
+
+
+
+/*--//-----Resumen/pasos-----//--*/
+
+.pasos {
+    width: 100%;
+    height: 20%;
+    min-height: 200px;
+    background-color: var(--color3);
+    padding: 3em 5em;
+
+}
+
+.pasos-p {
+    margin: .5rem 1em 0 1em;
+}
+
+
+.cnt-pasos {
+
+    margin: auto;
+    max-width: 1600px;
+    height: 100%;
+    text-align: justify;
+
+}
+
+/*--//-----FIN Resumen/pasos-----//--*/
+
+
+
+
+/*--//-----FOOTER-----//--*/
+
+footer {
+    background-color: var(--color5);
+    width: 100%;
+    height: 20%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+
+}
+
+.cnt-footer {
+    margin: auto;
+    max-width: 1600px;
+}
+
+.img-logo {
+
+    width: 150px;
+}
+
+.p-footer {
+    color: var(--color6);
+    margin: 1em;
+    display: flex;
+    text-align: center;
+}
+
+/*--//-----FIN FOOTER-----//--*/
+
+.entrada {
+    font-size: 1.2em;
+}

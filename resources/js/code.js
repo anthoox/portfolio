@@ -2,7 +2,7 @@ window.onload = function(){
     const headerDesk = document.querySelector('.header__desktop');
     const headerMovil = document.querySelector('.header__movil');
     const main = document.querySelector('.main');
-    const scrollDesk = 10;
+    const scrollDesk = 0;
     window.addEventListener("scroll", ()=>{
         if(window.scrollY > scrollDesk){
             headerDesk.classList.add("fixeder_header");

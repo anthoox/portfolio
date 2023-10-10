@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Quicksand:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/animations.css">
     <link rel="shortcut icon" href="resources/img/logo/iconoo.ico" />
     <script src="resources/js/code.js"></script>
 
@@ -21,10 +22,30 @@
 <body id="home">
 
     <header class="header__movil">
-        <div><a href="#home"><img src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web" class="header__logo"></a>
+        <div><a href="#home"><img id="logo-1" src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web"
+                    class="header__logo"></a>
         </div>
-        <div>
-            <i class="header__icon las la-bars"></i>
+        <div class="header__movil--btns">
+            <div class="container">
+                <label class="switch-name">
+                    <input id="check1" type="checkbox" class="checkbox">
+                    <div class="back"></div>
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                        </path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                        </path>
+                    </svg>
+                </label>
+            </div>
+            <div>
+                <i class="header__icon las la-bars"></i>
+            </div>
+
         </div>
     </header>
     <!-- Nav para movil -->
@@ -42,7 +63,7 @@
 
     <header class="header__desktop">
         <div class="header__desktop--div">
-            <div><a href="#home"><img src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web"
+            <div><a href="#home"><img id="logo-2" src="resources/img/logo/mo_cyan_f.png" alt="Logo de la web"
                         class="header__logo"></a>
             </div>
             <nav class="header__desktop--nav">
@@ -53,8 +74,26 @@
                     <li><a href="#tech"><span class="desktop__nav__element">Tecnologías</span></a></li>
                 </ul>
             </nav>
+            <div class="header__desktop--btns">
+                <div class="container">
+                    <label class="switch-name">
+                        <input id="check2" type="checkbox" class="checkbox">
+                        <div class="back"></div>
+                        <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path
+                                d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                            </path>
+                        </svg>
+                        <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+                <a href="#contact"><button class="header__desktop__btn">Contacto</button></a>
+            </div>
 
-            <button class="header__desktop__btn"><a class="" href="#contact">Contacto</a></button>
         </div>
 
 
@@ -67,7 +106,7 @@
                 <p class="greeting"><span id="span__cyan"><strong>¡</strong></span>Hola<span
                         id="span__cyan"><strong>!</strong></span></p>
                 <h1 class="name">Soy Anthony Alegría</h1>
-                <h6 class="profession">Desarrollador de aplicaciones web</h6>
+                <span class="profession">Desarrollador de aplicaciones web</span>
 
 
                 <div class="cnt__social--movil">
@@ -79,7 +118,7 @@
                     <a class="cnt__social--movil--icon" href="https://codepen.io/your-work/" target="_blank"><i
                             class=" lab la-codepen"></i></i></a>
                 </div>
-                <button class="btn__contact">Contactame</button>
+                <a href="#contact"><button class="btn__contact">Contactame</button></a>
             </div>
 
             <div class="cnt__photo">
@@ -150,7 +189,7 @@
                 <div class="tech__col">
                     <h5>Bases de datos</h5>
                     <div class="cnt__tech__child">
-                        <img class=" icon__tech " src=" resources/img/iconos/mysql2.svg" alt="icono de MySQL">
+                        <img class=" icon__tech " src=" resources/img/iconos/mysql.svg" alt="icono de MySQL">
                         <img class=" icon__tech " src=" resources/img/iconos/mariadb.svg" alt="icono de MySQL">
                     </div>
                 </div>
@@ -162,30 +201,36 @@
             <div class="cnt__form">
                 <p class="contact__p"><span id="span__cyan">¡</span>Hablemos<span id="span__cyan">!</span> Estoy a un
                     formulario de distancia.</p>
-                <form class="form" action="">
-                    <div class="cnt__input cnt__input--1">
-                        <label class="form__label" for="name">Nombre</label><br>
-                        <input class="form__input" type="text" name="name" required>
-                    </div>
-                    <div class="cnt__input cnt__input--2">
-                        <label class="form__label" for="name">Email</label><br>
-                        <input class="form__input" type="text" name="email" required>
-                    </div>
-                    <div class="cnt__input cnt__input--3">
-                        <label class="form__label" for="name">Mensaje</label><br>
-                        <input class="form__input" type="text" name="Mensaje" required>
-                    </div>
-                    <div class="form__cnt__btn">
-                        <button class="form__btn--enviar">Enviar</button>
-                    </div>
+                <form action="https://formsubmit.co/282ab1fa9d1d6b81eb2ecf528b50bd0f" method="POST" />
+                <div class="cnt__input cnt__input--1">
+
+                    <input id="input_1" class="form__input" type="text" name="name" required>
+                    <label class="form__label" for="name">Nombre</label>
+                    <i></i>
+                </div>
+                <div class="cnt__input cnt__input--2">
+                    <input id="input_2" class="form__input" type="text" name="email" required>
+                    <label class="form__label" for="email">Email</label>
+                    <i></i>
+                </div>
+                <div class="cnt__input cnt__input--3">
+                    <input id="input_3" class="form__input" type="text" name="mensaje" required>
+                    <label class="form__label" for="mensaje">Mensaje</label>
+
+                    <i></i>
+                </div>
+                <input id="input_3" class="form__input" type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                <div class="form__cnt__btn">
+                    <button class="form__btn--enviar">Enviar</button>
+                </div>
 
                 </form>
             </div>
         </section>
-        <button class="btn__up "><i class="las la-angle-up"></i></button>
+        <a href="#home"><button class="btn__up "><i class="las la-angle-up"></i></i></button></a>
     </main>
     <footer>
-        <div><img class="footer__logo" src="resources/img/logo/mo_logo_cyan_f2.png" alt=""></div>
+        <div><img id="logo-3" class="footer__logo" src="resources/img/logo/mo_logo_cyan_f2.png" alt=""></div>
         <p>Anthony Alegría Alcántara | Desarrollador de aplicaciones web</p>
         <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
         <p> &#169 2023 anthoox</p>

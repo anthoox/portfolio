@@ -2,8 +2,8 @@ window.onload = function(){
     /*
      * Estilo cabecera flotante y boton
      */
-    const headerDesk = document.querySelector('.header__desktop');
-    const headerMovil = document.querySelector('.header__movil');
+    const headerDesk = document.querySelector('.header_desktop');
+    const headerMovil = document.querySelector('.header_movil');
     const main = document.querySelector('.main');
     const btnUP = document.querySelector('.btn__up');
     var scrollDesk = 0;
@@ -89,7 +89,6 @@ window.onload = function(){
     function sincronizarCheckboxes(checkbox) {
         const checkbox1 = document.getElementById('check1');
         const checkbox2 = document.getElementById('check2');
-      
         if (checkbox === checkbox1) {
           checkbox2.checked = checkbox1.checked;
         } else if (checkbox === checkbox2) {
@@ -106,6 +105,33 @@ window.onload = function(){
     sincronizarCheckboxes(checkbox2);
     });
 
+
+    /*
+     * Configuración mostrar y ocultar menu.
+     */
+    const btnMenu = document.querySelector('.header__icon');
+    const menu = document.querySelector('.header_movil-nav');
+    const cerrar = document.querySelector('.nav__movil--cerrar');
+    btnMenu.addEventListener('click', ()=>{
+        menu.style.transform = 'translateX(0%)';
+
+    })
+    cerrar.addEventListener('click', ()=>{
+        menu.style.transform = 'translateX(250%)';
+    })
+    main.addEventListener('click', ()=>{
+        menu.style.transform = 'translateX(250%)';
+    })
+
+    // prueba(cerrar);
+    // prueba(main)
+
+    // function prueba(ele){
+        
+    //     ele.addEventListener('click', ()=>{
+    //         menu.style.transform = 'translateX(250%)';
+    //     })
+    // }
 
 
 

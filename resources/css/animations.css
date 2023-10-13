@@ -52,18 +52,12 @@
 }
 
 /* *boton dia noche */
-
-.header__movil--btns .container{
-    display: flex;
-    align-items: center;
-    gap: .5em;
-}
 .switch-name {
     --dark-sky: #5F27CD;
     --moon: #ffd365;
     --light-sky: #87CEEB ;
     --sun: #ffed89;
-    display: inline-block;
+    display: block;
     position: relative;
     right: 5px;
     border-radius: 5em;

@@ -35,51 +35,38 @@ window.onload = function(){
         check.addEventListener('click', () => {
             const root = document.documentElement;
             const estilo = getComputedStyle(document.documentElement);
-            const color = estilo.getPropertyValue('--bg-dark').trim();
+            const color = estilo.getPropertyValue('--bg').trim();
             const foto = document.querySelector('.cnt__photo');
             const logo1 = document.getElementById('logo-1');
             const logo2 = document.getElementById('logo-2');
             const logo3 = document.getElementById('logo-3');
 
-            if(color === '#222831'){
-                root.style.setProperty('--bg-dark', '#FEFEFE');
+            if(color === '#222434'){
+                root.style.setProperty('--bg', '#FAFAFA');
                 root.style.setProperty('--white', '#000000');
                 root.style.setProperty('--cyan', '#5F27CD');
                 root.style.setProperty('--black', '#FFFFFF');
-                root.style.setProperty('--text-grey', '#222f3e');
-                root.style.setProperty('--text-dark', '#000000');
+                // root.style.setProperty('--lightgrey', '#222f3e');
+                // root.style.setProperty('--grey', '#000000');
                 root.style.setProperty('--purple', '#00FFFF');      
+                root.style.setProperty('color-scheme', 'light');
                 foto.classList.add('light__shadow');
                 logo1.src = 'resources/img/logo/mc_morado.png';
                 logo2.src = 'resources/img/logo/mc_morado.png';
                 logo3.src = 'resources/img/logo/mc_logo_morado.png';
-                btnUP.style.boxShadow =
-                '0px 1.3px 3.6px rgba(0, 0, 0, 0.08), ' +
-                '0px 3.6px 10px rgba(0, 0, 0, 0.115), ' +
-                '0px 8.7px 24.1px rgba(0, 0, 0, 0.15), ' +
-                '0px 29px 80px rgba(0, 0, 0, 0.23)';    
-                
             }else{
-                root.style.setProperty('--bg-dark', '#222831');
+                root.style.setProperty('--bg', '#222434');
                 root.style.setProperty('--white', '#FFFFFF');
                 root.style.setProperty('--cyan', '#00FFFF');
                 root.style.setProperty('--black', '#000000');
-                root.style.setProperty('--text-grey', '#c8d6e5');
-                root.style.setProperty('--text-dark', '#8395a7');
+                // root.style.setProperty('--lightgrey', '#c8d6e5');
+                // root.style.setProperty('--grey', '#8395a7');
                 root.style.setProperty('--purple', '#5F27CD');
+                root.style.setProperty('color-scheme', 'dark');
                 logo1.src = 'resources/img/logo/mo_cyan_f.png';
                 logo2.src = 'resources/img/logo/mo_cyan_f.png';
                 logo3.src = 'resources/img/logo/mo_logo_cyan_f2.png';
-                btnUP.style.boxShadow =
-                '1px 5.9px 28.1px rgba(0, 0, 0, 0.054),'+
-                '2px 11.5px 42.5px rgba(0, 0, 0, 0.078),'+
-                '3.1px 17.6px 52.2px rgba(0, 0, 0, 0.097),'+
-                '+4.3px 24.9px 60.7px rgba(0, 0, 0, 0.113),'+
-                '+6.1px 34.9px 70.8px rgba(0, 0, 0, 0.132),'+
-                '+8.9px 51.2px 87.1px rgba(0, 0, 0, 0.156),'+
-                '+16px 92px 134px rgba(0, 0, 0, 0.21)';
 
-                
             }
         })
 

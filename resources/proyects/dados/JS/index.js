@@ -67,11 +67,11 @@ var visible = true;
 function ocultarMostrar() {
     if (visible == true) {
         juego3d.style.display = 'none';
-        juego2d.style.display = 'block'
+        juego2d.style.display = 'flex'
         reseteoAnimacion2();//detenido el movimiento q se producia al cambiar del 3d al 2d
         visible = false;
     } else {
-        juego3d.style.display = 'block';
+        juego3d.style.display = 'flex';
         juego2d.style.display = 'none'
         visible = true;
     }

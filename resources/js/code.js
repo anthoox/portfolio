@@ -46,8 +46,7 @@ window.onload = function(){
                 root.style.setProperty('--white', '#000000');
                 root.style.setProperty('--cyan', '#5F27CD');
                 root.style.setProperty('--black', '#FFFFFF');
-                // root.style.setProperty('--lightgrey', '#222f3e');
-                // root.style.setProperty('--grey', '#000000');
+                root.style.setProperty('--grey', '#3A3A3A');
                 root.style.setProperty('--purple', '#00FFFF');      
                 root.style.setProperty('color-scheme', 'light');
                 foto.classList.add('light__shadow');
@@ -59,8 +58,7 @@ window.onload = function(){
                 root.style.setProperty('--white', '#FFFFFF');
                 root.style.setProperty('--cyan', '#00FFFF');
                 root.style.setProperty('--black', '#000000');
-                // root.style.setProperty('--lightgrey', '#c8d6e5');
-                // root.style.setProperty('--grey', '#8395a7');
+                root.style.setProperty('--grey', '#c8d6e5');
                 root.style.setProperty('--purple', '#5F27CD');
                 root.style.setProperty('color-scheme', 'dark');
                 logo1.src = 'resources/img/logo/mo_cyan_f.png';

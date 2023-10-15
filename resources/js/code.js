@@ -41,7 +41,7 @@ window.onload = function(){
             const logo2 = document.getElementById('logo-2');
             const logo3 = document.getElementById('logo-3');
 
-            if(color === '#222434'){
+            if(color === '#222222'){
                 root.style.setProperty('--bg', '#FAFAFA');
                 root.style.setProperty('--white', '#000000');
                 root.style.setProperty('--cyan', '#5F27CD');
@@ -55,7 +55,7 @@ window.onload = function(){
                 logo2.src = 'resources/img/logo/mc_morado.png';
                 logo3.src = 'resources/img/logo/mc_logo_morado.png';
             }else{
-                root.style.setProperty('--bg', '#222434');
+                root.style.setProperty('--bg', '#222222');
                 root.style.setProperty('--white', '#FFFFFF');
                 root.style.setProperty('--cyan', '#00FFFF');
                 root.style.setProperty('--black', '#000000');
@@ -109,18 +109,6 @@ window.onload = function(){
     main.addEventListener('click', ()=>{
         menu.style.transform = 'translateX(250%)';
     })
-
-    // prueba(cerrar);
-    // prueba(main)
-
-    // function prueba(ele){
-        
-    //     ele.addEventListener('click', ()=>{
-    //         menu.style.transform = 'translateX(250%)';
-    //     })
-    // }
-
-
 
 }
 

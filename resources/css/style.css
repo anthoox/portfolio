@@ -1,11 +1,11 @@
 /* Colores */
 :root {
-    --bg: #222222     ;
+    --bg: #222222;
 
     --black: #000000;
     --white: #FFFFFF;
-    --grey: #8395a7;
-    --lightgrey: #c8d6e5;
+    --darkgrey: #8395a7;
+    --grey: #c0d6e5;
     --dark: #222f3e;
 
     --cyan: #00FFFF;
@@ -16,6 +16,7 @@
 
     --gradient: linear-gradient(45deg, var(--cyan) 0%, var(--purple) 100%);
     
+    /* Configuración modo oscuro */
     background-color: Canvas;
     color: CanvasText;
     color-scheme: dark;
@@ -252,7 +253,7 @@ section{
     font-weight: 500;
 }
 
-h1{
+h2{
     font-family: 'Quicksand', sans-serif;
     font-size: 1.8em;
     color: var(--cyan);
@@ -368,16 +369,19 @@ h1{
     text-align: center;
 }
 
+
 .sections{
     margin-top: 2.5em;
 }
 
+.parrafo{
+    margin: 1em 0em;
+}
 .aboutme__p{
     margin-top: 2.5em;
 }
 
 .aboutme__p-1{
-
     margin: .25em 0;
     color: var(--grey);
 }
@@ -810,11 +814,9 @@ footer>p>a{
     
     }
 
-    .cnt__photo a{
-        width: 250px;
-        height: 250px;
-    }
+    
     .cnt__photo--photo{
+        display: block;
         width: 170px;
         border-radius: 50%;
     }
@@ -892,11 +894,13 @@ footer>p>a{
     }
  
     .name{
-        font-size: 2.5em;
+        font-size: 2.5em; 
     }
    
     .cnt__photo{
         border: 2px solid var(--cyan);
+
+
     }
     .cnt__photo--photo{
         width: 200px;

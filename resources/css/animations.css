@@ -20,36 +20,33 @@
 }
 
 /* *iconos de tecnologias */
-.icon__tech:nth-child(even):hover{
-    scale: 1.1;
-    animation: rtambalear 1s forwards;
+.icon__tech:hover{
+    scale: 1.2;
+    animation: tambalear .5s forwards;
 }
-.icon__tech:nth-child(odd):hover{
-    scale: 1.1;
-    animation: tambalear 1s forwards;
+.icon__tech2:hover{
+    scale: 1.2;
+    animation: tambalear .5s forwards;
 }
 @keyframes tambalear {
     0% {
       transform: rotate(0deg);
     }
-    50% {
+    25% {
       transform: rotate(10deg);
-    }
-    100% {
-      transform: rotate(10deg); /* Mantén 20 grados */
-    }
-}
-@keyframes rtambalear {
-    0% {
-      transform: rotate(0deg);
     }
     50% {
       transform: rotate(-10deg);
     }
+    75% {
+      transform: rotate(10deg);
+    }
+
     100% {
-      transform: rotate(-10deg); /* Mantén 20 grados */
+      transform: rotate(0deg); /* Mantén 20 grados */
     }
 }
+
 
 /* *boton dia noche */
 .switch-name {

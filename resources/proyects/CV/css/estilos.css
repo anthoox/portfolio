@@ -17,15 +17,14 @@
 HTML{
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 25px;
 }
 
 body{
     background-color: var(--fondo);
     color: var(--texto);
     transition: all 500ms;
-    display: flex;
-    justify-content: center;
+
 }
 
 h1, h2, h3, h4{
@@ -39,14 +38,14 @@ a{
 /* CONTENEDOR PRINCIPAL */
 .contenedor-principal{
     background-color: var(--contenedor);
-    padding: 1.5em;
+    padding: 3em 1.5em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* CABECERA */
 h1{
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 .menu{
     margin-top: .5em;
@@ -57,12 +56,13 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  
+
     padding: 0em 1em;
 }
 
 .menu ul li{
     display: flex;
+    align-items: center;
     padding: .2em .6em;
 }
 
@@ -120,6 +120,10 @@ h1{
 /*  VISTA MOVIL GRANDE */
 @media screen and (min-width:576px) {
 
+    body{
+        display: flex;
+        justify-content: center;
+    }
     /* CONTENEDOR PRINCIPAL */
     .contenedor-principal{
         max-width: 600px;

@@ -1,0 +1,158 @@
+/* COLORES */
+:root{
+    --fondo: #2C3E50;
+    --contenedor: #ECF0F1;
+    --encabezado: #E74C3C;
+    --resaltado: #3498DB;
+    --texto: #555;
+    --secundario: #27AE60;
+}
+/* GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+HTML{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+body{
+    background-color: var(--fondo);
+    color: var(--texto);
+    transition: all 500ms;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Raleway', sans-serif;
+    color: var(--encabezado);
+}
+a{
+    color: var(--texto);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-principal{
+    background-color: var(--contenedor);
+    padding: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* CABECERA */
+h1{
+    text-align: center;
+    font-size: 1.8em;
+}
+.menu{
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: .9em;
+}
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    padding: 0em 1em;
+}
+
+.menu ul li{
+    display: flex;
+    padding: .2em .6em;
+}
+
+.menu ul li i{
+    font-size: 1.5em;
+}
+
+/* CABECERAS SECCIONES */
+
+.cabecera-seccion{
+    border-bottom: 1px solid var(--texto);
+}
+.cabecera-seccion .titulo-cabecera{
+    font-size: 1.2em;
+    margin-bottom: .25em;
+}
+
+/* ARTICULOS */
+.articulo{
+    margin-top: .25em;
+    margin-bottom: 1em;
+    font-size: 1em;  
+}
+
+.articulo .articulo-cabecera{
+    display: flex;
+    justify-content: space-between;
+}
+
+.articulo .titulo-articulo{
+    font-size: 1em;
+
+}
+
+
+.articulo a, .articulo span{
+    font-family: 'Nunito', sans-serif;
+    font-size: .9em;
+}
+
+.articulo ul{
+    margin-top: .25em;
+    margin-left: 2em;
+}
+
+/* ADICIONAL */
+.cnt-articulos-adicional{
+    display: flex;
+    justify-content: space-between;
+}
+.cnt-articulos-adicional .articulo{
+    width: 33%;
+}
+
+/*  VISTA MOVIL GRANDE */
+@media screen and (min-width:576px) {
+
+    /* CONTENEDOR PRINCIPAL */
+    .contenedor-principal{
+        max-width: 600px;
+        padding: 4em ;
+    }
+    
+}
+
+/* VISTA TABLET */
+@media screen and (min-width:768px) {
+    body{
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .contenedor-principal{
+        min-height: 900px;
+        padding: 4em ;
+    }
+
+}
+
+/* VISTA ESCRITORIO */
+@media screen and (min-width:992px){
+    body{
+        padding: 4em;
+    }
+
+    .contenedor-principal{
+        min-width: 750px;
+        min-height: 1200px;
+        padding: 8em ;
+    }
+}

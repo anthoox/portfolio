@@ -429,6 +429,9 @@ h2{
 
 .proyects-span{
     transition: all 500ms;
+    background-image: url('../img/proyectos/en_proceso.jpg');
+    background-position: center;
+    background-size:  cover;
     position: absolute;
     top: 0;
     right: 0;
@@ -443,15 +446,16 @@ h2{
 }
 
 .proyect-1{
-    background-image: url(/resources/img/proyectos/Dado3.png);
+    background-image: url('../img/proyectos/Dado3.png');
     background-position: center;
     background-size:  cover;
 }
 .proyect-2{
-    background-image: url(/resources/img/proyectos/flamencosevillaclass.png);
+    background-image: url('../img/proyectos/flamencosevillaclass.png');
     background-position: center;
     background-size:  cover;
 }
+
 
 .poyects-texts{
     display: flex;
@@ -484,18 +488,22 @@ h2{
 
 .cnt_techno{
     margin-top: 2em;
+    padding: 0 2em;
 }
-.techno_row span{
+.cnt__icon_tech span{
     margin-top: .25em;
     font-family:'Fira Code', monospace;
     font-size: .8em;
     text-align: center;
 }
 .techno_row--icons{
-    padding: .5em 1em;
+    
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+.techno_row--icons2{
+    justify-content: space-around;
 }
 .cnt__icon_tech{
     width: 60px;
@@ -503,11 +511,9 @@ h2{
     flex-direction: column;
     align-items: center;
 }
-.techno_row--icons:nth-child(1){
-    justify-content: space-evenly;
-}
+
 .icon__tech{
-    width: 40px;
+    width: 60px;
     transition: all 250ms;
     filter: drop-shadow( 0px 5px 5px black );
 }

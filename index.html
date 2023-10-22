@@ -99,7 +99,7 @@
     <main class="main">
         <!-- SECCION INICIO -->
         <section class="home">
-            <div>
+            <div class="section_cnt">
                 <p class="greeting"><span id="span__cyan"><strong>¡</strong></span>Hola<span
                         id="span__cyan"><strong>!</strong></span></p>
                 <h2 class="name">Soy Anthony Alegría</h2>
@@ -128,12 +128,11 @@
         <!-- SECCION SOBREMI -->
         <section class="sections" id="aboutme">
             <h3 class="h3__title ">Sobre mi</h3>
-            <div class="cnt__aboutme">
+            <div class="cnt__aboutme section_cnt">
                 <p class="aboutme__p ">
                     Mi viaje en el desarrollo web comenzó hace dos años de manera autodidacta.
-                    Aunque mi enfoque inicial era el desarrollo <strong>frontend</strong>, me sorprendí al descubrir una
-                    fuerte
-                    afinidad por el <strong>backend</strong>, especialmente a través de <strong>PHP</strong>.
+                    Aunque mi enfoque inicial era el desarrollo <strong>frontend</strong>, me sorprendí mucho trabajando
+                    con el <strong>backend</strong>, especialmente a través de <strong>PHP</strong>.
                 </p>
                 <p class="aboutme__p p_jump ">
                     A pesar de mi relativa inexperiencia, mi objetivo es crear sitios web
@@ -148,14 +147,15 @@
                     ¡Gracias por visitar mi portfolio y espero que disfrutes explorando mi trabajo!
                 </p>
 
-                <p class="parrafo p_jump highlight">Puedes conocerme más por <a href="#">aquí</a></p>
+                <p class="parrafo p_jump highlight">Puedes conocerme más por <a
+                        href="resources/proyects/CV/cv.html">aquí</a></p>
             </div>
         </section>
 
         <!-- SECCIÓN PROYECTOS -->
         <section class="sections" id="proyects">
             <h3 class="h3__title">Proyectos</h3>
-            <div class="cnt__proyects">
+            <div class="cnt__proyects section_cnt">
                 <!-- PROYECTOS -->
                 <div class="proyects ">
                     <a href="resources/proyects/dados/index.html" target="_blank">
@@ -195,7 +195,7 @@
                         <p class="texts texts-p">Web de reservas de cursos y eventos de flamenco.</p>
                         <div class="proyect_icons">
                             <img class="proyect_icons_icono" src="resources/img/iconos/wordpress.svg"
-                                alt="icono de JavaScript">
+                                alt="icono de Wordpress">
                         </div>
                     </div>
                 </div>
@@ -208,7 +208,7 @@
                         <p class="texts texts-p">Web de reservas de cursos y eventos de flamenco.</p>
                         <div class="proyect_icons">
                             <img class="proyect_icons_icono" src="resources/img/iconos/wordpress.svg"
-                                alt="icono de JavaScript">
+                                alt="icono de Wordpress">
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@
                         <p class="texts texts-p">Web de reservas de cursos y eventos de flamenco.</p>
                         <div class="proyect_icons">
                             <img class="proyect_icons_icono" src="resources/img/iconos/wordpress.svg"
-                                alt="icono de JavaScript">
+                                alt="icono de Wordpress">
                         </div>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
                         <p class="texts texts-p">Web de reservas de cursos y eventos de flamenco.</p>
                         <div class="proyect_icons">
                             <img class="proyect_icons_icono" src="resources/img/iconos/wordpress.svg"
-                                alt="icono de JavaScript">
+                                alt="icono de Wordpress">
                         </div>
                     </div>
                 </div>
@@ -245,7 +245,7 @@
         <!-- SECCION TECNOLOGIAS -->
         <section class="sections" id="tech">
             <h3 class="h3__title">Tecnologías</h3>
-            <div class="cnt_techno">
+            <div class="cnt_techno section_cnt">
 
                 <div class="techno_row--icons">
                     <div class="cnt__icon_tech">
@@ -261,10 +261,29 @@
                         <img class="icon__tech " src="resources/img/iconos/js.svg" alt="icono de JavaScript">
                         <span>JavaScript</span>
                     </div>
-
+                    <div class="cnt__icon_tech cnt__icon_tech">
+                        <img class=" icon__tech " src=" resources/img/iconos/php.svg" alt="icono de PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="cnt__icon_tech cnt__icon_tech">
+                        <img class=" icon__tech  " src=" resources/img/iconos/mysql.svg" alt="icono de MySQL">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="cnt__icon_tech">
+                        <img class="icon__tech " src="resources/img/iconos/bootstap.svg" alt="icono de Bootstrap">
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="cnt__icon_tech ">
+                        <img class="icon__tech  " src="resources/img/iconos/wordpress.svg" alt="icono de WordPress">
+                        <span>WordPress</span>
+                    </div>
+                    <div class="cnt__icon_tech">
+                        <img class="icon__tech " src="resources/img/iconos/git.svg" alt="icono de Git">
+                        <span>Git</span>
+                    </div>
                 </div>
 
-                <div class="techno_row--icons techno_row--icons2">
+                <!-- <div class="techno_row--icons techno_row--icons2">
                     <div class="cnt__icon_tech cnt__icon_tech">
                         <img class=" icon__tech " src=" resources/img/iconos/php.svg" alt="icono de PHP">
                         <span>PHP</span>
@@ -289,14 +308,15 @@
                         <img class="icon__tech " src="resources/img/iconos/git.svg" alt="icono de Git">
                         <span>Git</span>
                     </div>
-                </div>
+                </div> -->
+            </div>
 
         </section>
 
         <!-- SECCION CONTACTO -->
         <section class="sections" id="contact">
             <h3 class="h3__title">Contacto</h3>
-            <div class="cnt__form">
+            <div class="cnt__form section_cnt">
                 <p class="contact__p"><span id="span__cyan">¡</span>Hablemos<span id="span__cyan">!</span> Estoy a un
                     formulario de distancia.</p>
                 <form class="form" action="https://formsubmit.co/282ab1fa9d1d6b81eb2ecf528b50bd0f" method="POST" />
@@ -331,9 +351,9 @@
     <!-- PIE DE PAGINA -->
     <footer>
         <div><img id="logo-3" class="footer__logo" src="resources/img/logo/mo_logo_cyan_f2.png" alt=""></div>
-        <p>Anthony Alegría Alcántara | Desarrollador de aplicaciones web</p>
-        <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
-        <p> &#169 2023 anthoox</p>
+        <!-- <p>Anthony Alegría Alcántara | Desarrollador de aplicaciones web</p> -->
+        <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a> | &#169 2023 anthoox</p>
+
     </footer>
 </body>
 

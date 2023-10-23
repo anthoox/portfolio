@@ -40,6 +40,7 @@ window.onload = function () {
             const logo1 = document.getElementById('logo-1');
             const logo2 = document.getElementById('logo-2');
             const logo3 = document.getElementById('logo-3');
+            const card = document.querySelectorAll('.card');
 
             if (color === '#282a36') {
                 root.style.setProperty('--bg', '#FAFAFA');
@@ -53,6 +54,10 @@ window.onload = function () {
                 logo1.src = 'resources/img/logo/mc_morado.png';
                 logo2.src = 'resources/img/logo/mc_morado.png';
                 logo3.src = 'resources/img/logo/mc_logo_morado.png';
+                card.forEach((element) => {
+                    element.classList.add('card-light');
+                })
+                card.classList.add('card-light');
             } else {
                 root.style.setProperty('--bg', '#282a36');
                 root.style.setProperty('--primary', '#F5F9FF');
@@ -64,6 +69,9 @@ window.onload = function () {
                 logo1.src = 'resources/img/logo/mo_cyan_f.png';
                 logo2.src = 'resources/img/logo/mo_cyan_f.png';
                 logo3.src = 'resources/img/logo/mo_logo_cyan_f2.png';
+                card.forEach((element) => {
+                    element.classList.remove('card-light');
+                })
 
             }
         })

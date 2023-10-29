@@ -1,3 +1,0 @@
-- Pokedex
-- Falta pagina de aviso legal y política de privacidad, pero esto lo haré antes de subirlo
-- Subir Web

@@ -36,7 +36,6 @@ window.onload = function () {
             const root = document.documentElement;
             const estilo = getComputedStyle(document.documentElement);
             const color = estilo.getPropertyValue('--bg').trim();
-            const foto = document.querySelector('.a__photo');
             const logo1 = document.getElementById('logo-1');
             const logo2 = document.getElementById('logo-2');
             const logo3 = document.getElementById('logo-3');
@@ -50,7 +49,6 @@ window.onload = function () {
                 root.style.setProperty('--secondary', '#3A3A3A');
                 root.style.setProperty('--purple', '#00FFFF');
                 root.style.setProperty('color-scheme', 'light');
-                foto.classList.add('light__shadow');
                 logo1.src = 'resources/img/logo/mc_morado.png';
                 logo2.src = 'resources/img/logo/mc_morado.png';
                 logo3.src = 'resources/img/logo/mc_logo_morado.png';

@@ -345,13 +345,6 @@ h2 {
 
 }
 
-.light__shadow {
-    box-shadow:
-        0px 1.3px 3.6px rgba(0, 0, 0, 0.08),
-        0px 3.6px 10px rgba(0, 0, 0, 0.115),
-        0px 8.7px 24.1px rgba(0, 0, 0, 0.15),
-        0px 29px 80px rgba(0, 0, 0, 0.23);
-}
 
 .cnt__photo:hover {
     transform: scale(1.05);
@@ -423,7 +416,7 @@ h2 {
 }
 
 .card .card_img {
-    width: 110%;
+    width: 150%;
     height: 110%;
     fill: #333;
     transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -431,8 +424,8 @@ h2 {
 
 .card:hover {
     border: 2px solid #ffffff;
-    transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(000, 255, 255, 0.3);
+
 }
 
 .card-light:hover {
@@ -446,7 +439,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1em;
+    /* gap: 1em; */
     top: 0;
     left: 0;
     width: 100%;
@@ -462,6 +455,7 @@ h2 {
 
 .card:hover .card__content {
     transform: rotateX(0deg);
+
 }
 
 .card__title {
@@ -475,7 +469,7 @@ h2 {
 
 .card__description {
     margin: 0px 0 0;
-    font-size: 1em;
+    font-size: .9em;
     color: #222;
     line-height: 1.4;
 }
@@ -493,6 +487,7 @@ h2 {
 
 .card_info a {
     color: #000;
+    font-size: .9em;
 }
 
 /* FIN CONFIGURACIÓN CARD DE PROYECTOS*/
@@ -724,14 +719,6 @@ footer>p>a {
     margin-bottom: .5em;
 }
 
-@media screen and (min-width:430px) {
-    /* .cnt__proyects {
-        grid-template-columns: 2fr 2fr;
-        grid-template-rows: 2fr 2fr 2fr;
-    } */
-
-}
-
 /* -----------------------------Estilos móvil----------------------------- */
 @media screen and (min-width:576px) {
 
@@ -767,15 +754,9 @@ footer>p>a {
         background-color: var(--cyan);
         border-radius: 50%;
         background: var(--gradient);
-        box-shadow:
-            1px 5.9px 28.1px rgba(0, 0, 0, 0.054),
-            2px 11.5px 42.5px rgba(0, 0, 0, 0.078),
-            3.1px 17.6px 52.2px rgba(0, 0, 0, 0.097),
-            4.3px 24.9px 60.7px rgba(0, 0, 0, 0.113),
-            6.1px 34.9px 70.8px rgba(0, 0, 0, 0.132),
-            8.9px 51.2px 87.1px rgba(0, 0, 0, 0.156),
-            16px 92px 134px rgba(0, 0, 0, 0.21);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
+
 
     .cnt__photo--photo {
         display: block;

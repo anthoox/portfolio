@@ -32,7 +32,7 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Nunito', sans-serif;
     outline: 0;
     scroll-behavior: smooth;
@@ -469,7 +469,7 @@ h2 {
 
 .card__description {
     margin: 0px 0 0;
-    font-size: .9em;
+    font-size: 1em;
     color: #222;
     line-height: 1.4;
 }
@@ -506,15 +506,15 @@ h2 {
 .cnt__icon_tech span {
     margin-top: .25em;
     font-family: 'Fira Code', monospace;
-    font-size: .7em;
+    font-size: .8em;
     text-align: center;
 }
 
 .techno_row--icons {
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: .5em;
 }
 
 .techno_row--icons2 {

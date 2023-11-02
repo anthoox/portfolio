@@ -7,7 +7,7 @@
     <meta name="author" content="Anthony Alegría Alcántara" />
     <meta name="copyright" content="anthoox" />
     <meta name="description" content="Web portfolio personal donde se muestran mis proyectos y capacidades">
-    <title>anthoox</title>
+    <title>anthoox - desarrollador de aplicaciones web</title>
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -53,12 +53,18 @@
     <!-- NAV MOVIL/TABLET -->
     <nav class="header_movil-nav">
         <ul>
-            <li><a href="#home"><i class="las la-home"></i><span>Inicio</span></a></li>
-            <li><a href="#aboutme"><i class="las la-user"></i><span>Sobre mí</span></a></li>
-            <li><a href="#proyects"><i class="las la-project-diagram"></i></i><span>Proyectos</span></a></li>
-            <li><a href="#tech"><i class="las la-laptop-code"></i><span>Tecnologías</span></a></li>
-            <li><a href="#contact"><i class="las la-headset"></i><span>Contacto</span></a></li>
-            <li><i class="nav__movil--cerrar las la-times"></i></li>
+            <!-- <li><a href="#home"><i class="las la-home"></i><span>Inicio</span></a></li> -->
+            <li><a href="#aboutme"><img class="icon_nav" src="resources/img/iconos/me2.svg" alt=""><span>Sobre
+                        mí</span></a></li>
+            <li><a href="#proyects"><img class="icon_nav" src="resources/img/iconos/proyect2.svg"
+                        alt=""><span>Proyectos</span></a></li>
+            <li><a href="#serv"><img class="icon_nav" src="resources/img/iconos/serv2.svg"
+                        alt=""><span>Servicios</span></a></li>
+            <li><a href="#tech"><img class="icon_nav" src="resources/img/iconos/tecno2.svg"
+                        alt="icono tecnologias"><span>Tecnologías</span></a></li>
+            <li><a href="#contact"><img class="icon_nav" src="resources/img/iconos/mail2.svg"
+                        alt="Icono contacto"><span>Contacto</span></a></li>
+            <li><img class="icon_nav cerrar" src="resources/img/iconos/cerrar2.svg" alt="Icono cerrar"></li>
         </ul>
 
     </nav>
@@ -71,9 +77,10 @@
             </div>
             <nav class="header_desktop-nav">
                 <ul>
-                    <li><a href="#home"><span class="desktop_nav_element">Inicio</span></a></li>
+                    <!-- <li><a href="#home"><span class="desktop_nav_element">Inicio</span></a></li> -->
                     <li><a href="#aboutme"><span class="desktop_nav_element">Sobre mí</span></a></li>
                     <li><a href="#proyects"></i><span class="desktop_nav_element">Proyectos</span></a></li>
+                    <li><a href="#serv"></i><span class="desktop_nav_element">Servicios</span></a></li>
                     <li><a href="#tech"><span class="desktop_nav_element">Tecnologías</span></a></li>
                 </ul>
             </nav>
@@ -115,7 +122,7 @@
                         target="_blank"><i class="lab la-linkedin-in" title="linkedin"></i></a>
                     <a class="cnt__social--movil--icon" href="https://github.com/anthoox" target="_blank"><i
                             class=" lab la-github" title="github"></i></a>
-                    <a class="cnt__social--movil--icon" href="https://codepen.io/your-work/" target="_blank"><i
+                    <a class="cnt__social--movil--icon" href="https://codepen.io/anthoox" target="_blank"><i
                             class=" lab la-codepen" title="codepen"></i></a>
                 </div>
                 <a href="#contact"><button class="btn__contact">Trabajemos juntos</button></a>
@@ -137,17 +144,13 @@
                     Aunque mi enfoque inicial era el desarrollo <strong>frontend</strong>, me sorprendí mucho trabajando
                     con el <strong>backend</strong>, especialmente a través de <strong>PHP</strong>.
                 </p>
-                <p class="aboutme__p p_jump ">
+                <p class="aboutme__p highlight p_jump ">
                     A pesar de mi relativa inexperiencia, mi objetivo es crear sitios web
                     atractivos y funcionales para
                     satisfacer las necesidades de los clientes y usuarios.
                 </p>
-                <p class="aboutme__p highlight p_jump">
+                <p class="aboutme__p  p_jump">
                     Este portfolio representa mi progreso y dedicación en el desarrollo web.
-                </p>
-
-                <p class="aboutme__p p_jump ">
-                    ¡Gracias por visitar mi portfolio y espero que disfrutes explorando mi trabajo!
                 </p>
 
                 <p class="parrafo p_jump highlight">Puedes conocerme más por <a href="../proyects/CV/cv.html">aquí</a>
@@ -160,14 +163,15 @@
         <section class="sections" id="proyects">
             <h3 class="h3__title">Proyectos</h3>
             <div class="cnt__proyects section_cnt">
+
                 <!-- PROYECTOS -->
                 <div class="card card-1">
                     <img class="card_img" src="resources/img/proyectos/Dado.png" alt="Aplicación Dados">
                     <div class="card__content">
-                        <p class="card__title">Cubo 2D/3D</p>
-                        <p class="card__description">Aplicación interactiva un cubo que puede cambiar entre su
-                            representación en 2D y
-                            3D donde se trabaja con perspectiva y animaciones para hacerlo girar.</p>
+                        <h4 class="card__title">Cubo 2D/3D</h4>
+                        <p class="card__description">Aplicación interactiva que cambia un dado entre su
+                            representación en 2D y 3D donde se trabaja con perspectiva y animaciones para hacerlo girar.
+                        </p>
                         <div class="card_info">
                             <div>
                                 <img class="card_icon" src="resources/img/iconos/html.svg" alt="icono de HTML5">
@@ -202,11 +206,31 @@
                 </div>
 
                 <div class="card card-3">
-                    <img class="card_img" src="resources/img/proyectos/pokedex.png" alt="Imagen Pokédex">
+                    <img class="card_img" src="resources/img/proyectos/pkdex.png" alt="Imagen Pokédex">
                     <div class="card__content">
-                        <p class="card__title">Pokédex</p>
-                        <p class="card__description">Aplicación desarrollada con conexiones a la PokeAPI para obtener
-                            los datos de los Pokémon y configuraciones extra para su funcionamiento de su interfaz.</p>
+                        <h4 class="card__title">Pokédex</h4>
+                        <p class="card__description">Pokédex interactiva. Conexión con la PokeAPI para obtener
+                            los datos de los Pokémon.</p>
+                        <div class="card_info">
+                            <div>
+                                <img class="card_icon" src="resources/img/iconos/html.svg" alt="icono de HTML5">
+                                <img class="card_icon " src="resources/img/iconos/css.svg" alt="icono de CSS">
+                                <img class="card_icon" src="resources/img/iconos/js.svg" alt="icono de JavaScript">
+                            </div>
+                            <div>
+                                <a href="#" target="_blank">Visitar</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-3">
+                    <img class="card_img" src="resources/img/proyectos/miwiki.png" alt="Imagen web wiki">
+                    <div class="card__content">
+                        <h4 class="card__title">miWiki</h4>
+                        <p class="card__description">Web guia HTML inspirada en Wikipedia. Segunda versión de un
+                            proyecto de una web estilo wikipedia de Freecodecamp.</p>
                         <div class="card_info">
                             <div>
                                 <img class="card_icon" src="resources/img/iconos/html.svg" alt="icono de HTML5">
@@ -222,6 +246,33 @@
                 </div>
 
             </div>
+        </section>
+        <section class="sections" id="serv">
+            <h3 class="h3__title">Servicios</h3>
+            <div class="cnt_serv section_cnt">
+
+                <div class="iconos_serv">
+                    <div class="cnt__icon_serv">
+                        <img class="icon__serv" src="resources/img/iconos/web2.svg" alt="icono de HTML5">
+                        <span>Desarrollo Web</span>
+                    </div>
+
+                    <div class="cnt__icon_serv">
+                        <img class="icon__serv  " src="resources/img/iconos/programar2.svg" alt="icono de CSS">
+                        <span>Programación</span>
+                    </div>
+                    <div class="cnt__icon_serv">
+                        <img class="icon__serv" src="resources/img/iconos/disenio2.svg" alt="icono de JavaScript">
+                        <span>Diseño</span>
+                    </div>
+                    <div class="cnt__icon_serv">
+                        <img class=" icon__serv" src=" resources/img/iconos/pc2.svg" alt="icono de PHP">
+                        <span>Microinfórmatica</span>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
 
         <!-- SECCION TECNOLOGIAS -->
@@ -307,8 +358,10 @@
     <!-- PIE DE PAGINA -->
     <footer>
         <div><img id="logo-3" class="footer__logo" src="resources/img/logo/mo_logo_cyan_f2.png" alt="Logo web"></div>
-        <!-- <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a> | &#169 2023 anthoox</p> -->
-        <p>anthoox &#169 2023 </p>
+        <p class="copy">anthoox &#169 2023 </p>
+        <p>Recursos de: <a href="https://yesicon.app/">yesicon</a>, <a href="https://getcssscan.com/">getcssscan</a> y
+            <a href="https://uiverse.io/">uiverse</a>
+        </p>
 
     </footer>
 </body>

@@ -29,15 +29,15 @@
 /* *iconos de tecnologias */
 .icon__tech:hover {
   scale: 1.2;
-  animation: tambalear .5s forwards;
+  /* animation: tambalear .5s forwards; */
 }
 
 .icon__tech2:hover {
   scale: 1.2;
-  animation: tambalear .5s forwards;
+  /* animation: tambalear .5s forwards; */
 }
 
-@keyframes tambalear {
+/* @keyframes tambalear {
   0% {
     transform: rotate(0deg);
   }
@@ -56,9 +56,8 @@
 
   100% {
     transform: rotate(0deg);
-    /* Mantén 20 grados */
   }
-}
+} */
 
 
 /* *boton dia noche */

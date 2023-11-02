@@ -8,7 +8,9 @@
     --secondary: #c8d6e5;
 
     --cyan: #00FFFF;
+    --cyant: #00FFFF50;
     --purple: #5F27CD;
+    --purplet: #5F27CD50;
 
     --gradient: linear-gradient(45deg, var(--cyan) 0%, var(--purple) 100%);
 
@@ -83,9 +85,11 @@ body {
     line-height: 20px;
     transition: 500ms;
     color: var(--cyan);
+
 }
 
 .header_movil-nav {
+
     box-sizing: border-box;
     position: fixed;
     top: 0;
@@ -104,7 +108,8 @@ body {
         0px 6px 16px rgba(0, 0, 0, 0.14);
     transform: translateX(250%);
     transition: all 1250ms;
-
+    box-shadow: 0px 1px 16px var(--cyant);
+    border: 2px solid var(--cyan)
 }
 
 .header_movil-nav ul {
@@ -123,6 +128,7 @@ body {
     flex-direction: column;
     align-items: center;
     transition: 500ms;
+
 }
 
 .header_movil-nav>ul>li>a:hover {
@@ -132,6 +138,7 @@ body {
 .header_movil-nav>ul>li>a:active {
     color: var(--primary);
     scale: .9;
+
 }
 
 .header_movil-nav>ul>li>a>i {
@@ -139,18 +146,20 @@ body {
 
 }
 
-.header_movil-nav>ul>li>a>span {
+.header_movil-nav>ul>li>a>img {
     font-size: 1em;
     font-weight: 600;
 }
 
-.nav__movil--cerrar {
-    color: var(--cyan);
-    font-size: 1.25em;
-    cursor: pointer;
-    transition: 500ms;
-    margin: 0 auto;
+.icon_nav {
+    width: 25px;
 }
+
+.icon_nav:hover {
+    filter: drop-shadow(0px 0px 4px var(--cyan));
+
+}
+
 
 .nav__movil--cerrar:hover {
     scale: 1.25;
@@ -163,6 +172,7 @@ body {
 
 .header__icon:hover {
     scale: 1.25;
+    filter: drop-shadow(0px 0px 4px var(--cyan));
 
 }
 
@@ -291,6 +301,7 @@ h2 {
     background-color: var(--cyan);
     color: var(--bg);
     scale: 1.05;
+    box-shadow: 0px 0px 14px var(--cyant);
 }
 
 .btn__contact :hover {
@@ -303,6 +314,7 @@ h2 {
     background-color: var(--primary);
     cursor: pointer;
     scale: .9;
+    box-shadow: 0px 0px 14px var(--cyant);
 }
 
 .btn__contact a:active {
@@ -319,6 +331,10 @@ h2 {
     width: 150px;
 }
 
+.cnt__social--movil:hover {
+    box-shadow: 0px 0px 14px var(--cyant);
+}
+
 .cnt__social--movil--icon {
     color: var(--primary);
     font-size: 1.75em;
@@ -332,6 +348,8 @@ h2 {
 .cnt__social--movil--icon>i:hover {
     color: var(--cyan);
     scale: 1.4;
+    filter: drop-shadow(0px 0px 4px var(--cyan));
+
 }
 
 .cnt__social--movil--icon>i:active {
@@ -359,7 +377,7 @@ h2 {
 
 
 .sections {
-    padding: 2em 0em;
+    padding: 2em 0em 1em 0;
 }
 
 .section_cnt {
@@ -367,6 +385,7 @@ h2 {
 }
 
 .aboutme__p {
+    margin-top: 3em;
     color: var(--primary);
 }
 
@@ -389,6 +408,8 @@ h2 {
 }
 
 .cnt__proyects {
+    margin-top: 4em;
+    margin-top: 3em;
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 1em;
@@ -402,9 +423,8 @@ h2 {
 .card {
     position: relative;
     width: 100%;
-    max-width: 360px;
-    height: 220px;
-    background-color: #f2f2f2;
+    max-width: 425px;
+    max-height: 280px;
     border-radius: 1em;
     display: flex;
     align-items: center;
@@ -412,24 +432,25 @@ h2 {
     border: 2px solid #00000050;
     overflow: hidden;
     perspective: 1000px;
-    transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: var(--bg);
+
 }
 
 .card .card_img {
     width: 150%;
     height: 110%;
     fill: #333;
-    transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
     border: 2px solid #ffffff;
-    box-shadow: 0 8px 16px rgba(000, 255, 255, 0.3);
-
+    box-shadow: 0 8px 16px var(--cyant);
+    border: 2px solid var(--cyan)
 }
 
 .card-light:hover {
-    border: 2px solid #000000;
     transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(95, 39, 205, 0.3);
 }
@@ -439,18 +460,17 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* gap: 1em; */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f2f2f2;
+    background-color: var(--bg);
     opacity: 1;
     transform: rotateX(-90deg);
     transform-origin: bottom;
-    transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover .card__content {
@@ -459,18 +479,20 @@ h2 {
 }
 
 .card__title {
-    color: #000;
-    font-weight: 700;
+    color: var(--cyan);
+    font-size: 1.1em;
+    font-weight: 800;
 }
 
 .card:hover .card_img {
     scale: 0;
+    border: 2px solid var(--cyan)
 }
 
 .card__description {
     margin: 0px 0 0;
-    font-size: 1em;
-    color: #222;
+    font-size: 1.1em;
+    color: var(--primary);
     line-height: 1.4;
 }
 
@@ -482,25 +504,73 @@ h2 {
 }
 
 .card_info .card_icon {
-    width: 25px;
+    width: 35px;
 }
 
 .card_info a {
-    color: #000;
-    font-size: .9em;
+    color: var(--cyan);
+    font-weight: 600;
+    font-size: 1em;
 }
 
 /* FIN CONFIGURACIÓN CARD DE PROYECTOS*/
 
 
 
-.cnt_techno {
+.cnt_serv {
     margin-top: 2em;
     margin-bottom: 2em;
-    padding: 0 2em;
-    border-top: 1px solid var(--cyan);
-    border-bottom: 1px solid var(--cyan);
+    padding: 4em 0em;
+    transition: all 100ms;
+    border-radius: 1em;
+}
+
+.cnt_serv .iconos_serv {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.cnt__icon_serv span {
+    margin-top: .25em;
+    font-family: 'Fira Code', monospace;
+    font-size: .8em;
+    text-align: center;
+    width: 150px;
+}
+
+.cnt__icon_serv {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon__serv {
+    width: 100px;
+    transition: all 250ms;
+    filter: drop-shadow(0px 2px 4px black);
+    transition: all 250ms;
+}
+
+.icon__serv:hover {
+    filter: drop-shadow(0px 0px 4px var(--cyan));
+}
+
+
+.cnt_techno {
+    margin-top: 4em;
+    margin-bottom: 3em;
+    border: 2px solid var(--cyan);
     padding: 4em 2em;
+    transition: all 100ms;
+    border-radius: 1em;
+}
+
+.cnt_techno:hover {
+    box-shadow: 0px 0px 14px var(--cyant);
 }
 
 .cnt__icon_tech span {
@@ -509,6 +579,7 @@ h2 {
     font-size: .8em;
     text-align: center;
 }
+
 
 .techno_row--icons {
     display: flex;
@@ -521,6 +592,8 @@ h2 {
     justify-content: space-around;
 }
 
+
+
 .cnt__icon_tech {
     width: 60px;
     display: flex;
@@ -531,7 +604,12 @@ h2 {
 .icon__tech {
     width: 50px;
     transition: all 250ms;
-    filter: drop-shadow(0px 4px 4px black);
+    filter: drop-shadow(0px 2px 4px black);
+    transition: all 250ms;
+}
+
+.icon__tech:hover {
+    filter: drop-shadow(0px 0px 4px var(--cyan));
 }
 
 #contact h3 {
@@ -593,6 +671,7 @@ h2 {
     transform: translateX(-5px) translateY(-20px);
     top: -25%;
     font-size: .8em;
+    filter: drop-shadow(0px 0px 4px var(--cyan));
 }
 
 .cnt__input i {
@@ -606,11 +685,13 @@ h2 {
     transition: 0.5s;
     pointer-events: none;
     z-index: 9;
+
 }
 
 .form__input:valid~i,
 .form__input:focus~i {
     height: 40px;
+    filter: drop-shadow(0px 0px 4px var(--cyan));
 }
 
 /* *Fin Estilos inputs */
@@ -638,6 +719,7 @@ h2 {
     background-color: var(--cyan);
     color: var(--bg);
     scale: 1.05;
+    filter: drop-shadow(0px 0px 4px var(--cyan));
 }
 
 .form__btn--enviar:active {
@@ -709,14 +791,16 @@ footer>p {
     color: var(--secondary);
 }
 
-footer>p>a {
+.copy {
+    color: var(--primary);
+}
 
-    color: var(--secondary);
+footer>p>a {
+    color: var(--cyan);
 }
 
 .footer__logo {
     width: 60px;
-    margin-bottom: .5em;
 }
 
 /* -----------------------------Estilos móvil----------------------------- */
@@ -788,7 +872,6 @@ footer>p>a {
     }
 
     .h3__title {
-
         font-size: 2em;
     }
 
@@ -872,6 +955,7 @@ footer>p>a {
         background-color: var(--cyan);
         color: var(--bg);
         scale: 1.05;
+        box-shadow: 0px 0px 14px var(--cyant);
     }
 
     .header_desktop_btn:active {
@@ -892,15 +976,15 @@ footer>p>a {
 
 @media screen and (min-width:930px) {
     .cnt__proyects {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 425px 425px;
         grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
     }
 
     .card {
-        width: 100%;
-        max-width: 100%;
-        max-height: 240px;
-
+        max-width: 425px;
     }
 }
 

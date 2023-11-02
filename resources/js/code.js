@@ -40,14 +40,42 @@ window.onload = function () {
             const logo2 = document.getElementById('logo-2');
             const logo3 = document.getElementById('logo-3');
             const card = document.querySelectorAll('.card');
+            let iconosServicios = document.querySelectorAll('.icon__serv');
+            let iconosNav = document.querySelectorAll('.icon_nav')
 
             if (color === '#282a36') {
+                // Iconos
+
+                iconosServicios = Array.from(iconosServicios);
+                iconosServicios.forEach((element) => {
+                    let ubicacion = element.src;
+                    let finalTexto = ubicacion.substring(ubicacion.indexOf("2.svg"));
+                    if (finalTexto == "2.svg") {
+                        finalTexto = "1.svg"
+                    }
+                    let nuevaUbicacion = ubicacion.replace("2.svg", "1.svg");
+                    element.src = nuevaUbicacion
+                })
+
+                iconosNav = Array.from(iconosNav);
+                iconosNav.forEach((element) => {
+                    let ubicacion = element.src;
+                    let finalTexto = ubicacion.substring(ubicacion.indexOf("2.svg"));
+                    if (finalTexto == "2.svg") {
+                        finalTexto = "1.svg"
+                    }
+                    let nuevaUbicacion = ubicacion.replace("2.svg", "1.svg");
+                    element.src = nuevaUbicacion
+                })
+
                 root.style.setProperty('--bg', '#FAFAFA');
                 root.style.setProperty('--primary', '#000000');
                 root.style.setProperty('--cyan', '#5F27CD');
+                root.style.setProperty('--cyant', '#5F27CD50');
                 root.style.setProperty('--black', '#F5F9FF');
                 root.style.setProperty('--secondary', '#3A3A3A');
                 root.style.setProperty('--purple', '#00FFFF');
+                root.style.setProperty('--purplet', '#00ffff50');
                 root.style.setProperty('color-scheme', 'light');
                 logo1.src = 'resources/img/logo/mc_morado.png';
                 logo2.src = 'resources/img/logo/mc_morado.png';
@@ -55,14 +83,44 @@ window.onload = function () {
                 card.forEach((element) => {
                     element.classList.add('card-light');
                 })
-                card.classList.add('card-light');
+
+
             } else {
+
+
+                // Iconos
+                iconosServicios = document.querySelectorAll('.icon__serv');
+                iconosServicios = Array.from(iconosServicios);
+                iconosServicios.forEach((element) => {
+                    let ubicacion = element.src;
+                    let finalTexto = ubicacion.substring(ubicacion.indexOf("1.svg"));
+                    if (finalTexto == "1.svg") {
+                        finalTexto = "2.svg"
+                    }
+                    let nuevaUbicacion = ubicacion.replace("1.svg", "2.svg");
+                    element.src = nuevaUbicacion
+                })
+
+                iconosNav = Array.from(iconosNav);
+                iconosNav.forEach((element) => {
+                    let ubicacion = element.src;
+                    let finalTexto = ubicacion.substring(ubicacion.indexOf("1.svg"));
+                    if (finalTexto == "1.svg") {
+                        finalTexto = "2.svg"
+                    }
+                    let nuevaUbicacion = ubicacion.replace("1.svg", "2.svg");
+                    element.src = nuevaUbicacion
+                })
+
+
                 root.style.setProperty('--bg', '#282a36');
                 root.style.setProperty('--primary', '#F5F9FF');
                 root.style.setProperty('--cyan', '#00FFFF');
+                root.style.setProperty('--cyant', '#00FFFF50');
                 root.style.setProperty('--black', '#000000');
                 root.style.setProperty('--secondary', '#c8d6e5');
                 root.style.setProperty('--purple', '#5F27CD');
+                root.style.setProperty('--purplet', '#5F27CD50');
                 root.style.setProperty('color-scheme', 'dark');
                 logo1.src = 'resources/img/logo/mo_cyan_f.png';
                 logo2.src = 'resources/img/logo/mo_cyan_f.png';
@@ -70,6 +128,7 @@ window.onload = function () {
                 card.forEach((element) => {
                     element.classList.remove('card-light');
                 })
+
 
             }
         })
@@ -102,7 +161,7 @@ window.onload = function () {
      */
     const btnMenu = document.querySelector('.header__icon');
     const menu = document.querySelector('.header_movil-nav');
-    const cerrar = document.querySelector('.nav__movil--cerrar');
+    const cerrar = document.querySelector('.cerrar');
     btnMenu.addEventListener('click', () => {
         menu.style.transform = 'translateX(0%)';
 
@@ -125,5 +184,6 @@ window.onload = function () {
     }
 
     setInterval(restartAnimation, 10000);
-}
 
+
+}

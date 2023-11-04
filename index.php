@@ -1,3 +1,57 @@
+<?php
+
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'resources/email/PHPMailer/Exception.php';
+require 'resources/email/PHPMailer/PHPMailer.php';
+require 'resources/email/PHPMailer/SMTP.php';
+
+// Cargamos los datos tras pasarlos por el validador
+require_once 'resources/email/validador.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+if($error == false){
+    try {
+
+        //Server settings
+        $mail->SMTPDebug = 0;                      //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host       = 'mail.anthoox.es';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = 'no-reply@anthoox.es';                     //SMTP username
+        $mail->Password   = 'A4;oE4Lp##Vx';                               //SMTP password
+        $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    
+        //Recipients
+        $mail->setFrom('no-reply@anthoox.es', 'Anthoox');
+        $mail->addAddress('kray.a4@gmail.com', 'Anthony Alegría');     //Add a recipient
+    
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Email de contacto web';
+        $mail->Body    = '<p>Mensaje enviado desde web:  <b>anthoox.es</b></p>'
+                        . "<b>Nombre</b>: " . $datosForm['nombre'] . "<br>"
+                        . "<b>Email</b>: " . $datosForm['email'] . "<br>"
+                        . "<b>Mensaje</b>: " . $datosForm['mensaje'] . "<br>";
+    
+        $mail->send();
+
+        $resultado = '<p class="email-ok">Mensaje enviado</p>';
+    } catch (Exception $e) {
+        echo "Error en el envio";
+    }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -140,14 +194,13 @@
             <h3 class="h3__title ">Sobre mi</h3>
             <div class="cnt__aboutme section_cnt">
                 <p class="aboutme__p ">
-                    Mi viaje en el desarrollo web comenzó hace dos años de manera autodidacta.
-                    Aunque mi enfoque inicial era el desarrollo <strong>frontend</strong>, me sorprendí mucho trabajando
-                    con el <strong>backend</strong>, especialmente a través de <strong>PHP</strong>.
+                    Mi viaje en el desarrollo web comenzó hace dos años de manera autodidacta. Aunque mi enfoque inicial
+                    era el desarrollo <strong>frontend</strong>, mi formación académica me llevó a descubrir y
+                    sorprenderme con el <strong>backend</strong>, especialmente a través de <strong>PHP</strong>.
                 </p>
                 <p class="aboutme__p highlight p_jump ">
-                    A pesar de mi relativa inexperiencia, mi objetivo es crear sitios web
-                    atractivos y funcionales para
-                    satisfacer las necesidades de los clientes y usuarios.
+                    A pesar de mi relativa inexperiencia, busco crear sitios web atractivos y funcionales.
+                    Mi objetivo es seguir mejorando mis habilidades para satisfacer las necesidades de los usuarios.
                 </p>
                 <p class="aboutme__p  p_jump">
                     Este portfolio representa mi progreso y dedicación en el desarrollo web.
@@ -247,26 +300,28 @@
 
             </div>
         </section>
+
+        <!-- SECCIÓN SERVICIOS -->
         <section class="sections" id="serv">
             <h3 class="h3__title">Servicios</h3>
             <div class="cnt_serv section_cnt">
 
                 <div class="iconos_serv">
                     <div class="cnt__icon_serv">
-                        <img class="icon__serv" src="resources/img/iconos/web2.svg" alt="icono de HTML5">
+                        <img class="icon__serv" src="resources/img/iconos/web2.svg" alt="icono de desarrollo web">
                         <span>Desarrollo Web</span>
                     </div>
 
                     <div class="cnt__icon_serv">
-                        <img class="icon__serv  " src="resources/img/iconos/programar2.svg" alt="icono de CSS">
+                        <img class="icon__serv  " src="resources/img/iconos/programar2.svg" alt="icono de programación">
                         <span>Programación</span>
                     </div>
                     <div class="cnt__icon_serv">
-                        <img class="icon__serv" src="resources/img/iconos/disenio2.svg" alt="icono de JavaScript">
+                        <img class="icon__serv" src="resources/img/iconos/disenio2.svg" alt="icono de diseño">
                         <span>Diseño</span>
                     </div>
                     <div class="cnt__icon_serv">
-                        <img class=" icon__serv" src=" resources/img/iconos/pc2.svg" alt="icono de PHP">
+                        <img class=" icon__serv" src=" resources/img/iconos/pc2.svg" alt="icono de Microinfórmatica">
                         <span>Microinfórmatica</span>
                     </div>
                 </div>
@@ -326,30 +381,36 @@
             <div class="cnt__form section_cnt">
                 <p class="contact__p"><span id="span__cyan">¡</span>Hablemos<span id="span__cyan">!</span> Estoy a un
                     formulario de distancia.</p>
-                <form class="form" action="https://formsubmit.co/282ab1fa9d1d6b81eb2ecf528b50bd0f" method="POST" />
-                <div class="cnt__input cnt__input--1">
+                <form class="form" action="index.php#contact" method="POST">
+                    <div class="cnt__input cnt__input--1">
 
-                    <input id="input_1" class="form__input" type="text" name="name" required>
-                    <label class="form__label" for="name">Nombre</label>
-                    <i></i>
-                </div>
-                <div class="cnt__input cnt__input--2">
-                    <input id="input_2" class="form__input" type="text" name="email" required>
-                    <label class="form__label" for="email">Email</label>
-                    <i></i>
-                </div>
-                <div class="cnt__input cnt__input--3">
-                    <input id="input_3" class="form__input" type="text" name="mensaje" required>
-                    <label class="form__label" for="mensaje">Mensaje</label>
+                        <input id="input_1" class="form__input" type="text" name="nombre" required>
+                        <label class="form__label" for="nombre">Nombre</label>
+                        <i></i>
+                    </div>
+                    <div class="cnt__input cnt__input--2">
+                        <input id="input_2" class="form__input" type="text" name="email" required>
+                        <label class="form__label" for="email">Email</label>
+                        <i></i>
+                    </div>
+                    <div class="cnt__input cnt__input--3">
+                        <input id="input_3" class="form__input" type="text" name="mensaje" required>
+                        <label class="form__label" for="mensaje">Mensaje</label>
 
-                    <i></i>
-                </div>
-                <input id="input_3" class="form__input" type="hidden" name="_next" value="http://127.0.0.1:5500/">
-                <div class="form__cnt__btn">
-                    <button class="form__btn--enviar">Enviar</button>
-                </div>
+                        <i></i>
+                    </div>
+                    <div class="form__cnt__btn">
+                        <input type="submit" class="form__btn--enviar" value="Enviar">
+                    </div>
 
                 </form>
+                <div class="mensaje-email">
+                    <?php
+                        if(isset($resultado) && $resultado != false){
+                            echo $resultado;
+                        }                 
+                    ?>
+                </div>
             </div>
         </section>
         <a href="#home"><button class="btn__up "><i class="las la-angle-up"></i></i></button></a>

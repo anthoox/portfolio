@@ -29,35 +29,13 @@
 /* *iconos de tecnologias */
 .icon__tech:hover {
   scale: 1.2;
-  /* animation: tambalear .5s forwards; */
 }
 
 .icon__tech2:hover {
   scale: 1.2;
-  /* animation: tambalear .5s forwards; */
+
 }
 
-/* @keyframes tambalear {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(10deg);
-  }
-
-  50% {
-    transform: rotate(-10deg);
-  }
-
-  75% {
-    transform: rotate(10deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-} */
 
 
 /* *boton dia noche */

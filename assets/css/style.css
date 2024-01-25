@@ -280,7 +280,7 @@ h6 {
     display: none;
 }
 
-.content .span__cyan {
+.content .cyan {
     color: var(--cyan);
 }
 
@@ -296,10 +296,10 @@ h6 {
 .content .profession {
     text-align: center;
     font-family: 'Fira Code', monospace;
-    font-size: .8rem;
+    font-size: .65rem;
     font-weight: 400;
     display: inline-block;
-    padding: .15em .5rem;
+    /* padding: .15em .5rem; */
 }
 
 .content .content-data-social {
@@ -395,8 +395,8 @@ h6 {
 
 .card {
     position: relative;
-    width: 291.24px;
-    height: 180px;
+    width: 210.34px;
+    height: 130px;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -438,7 +438,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 1rem;
     box-sizing: border-box;
     background-color: var(--bg);
     opacity: 1;
@@ -453,8 +453,8 @@ h6 {
 
 .card__title {
     color: var(--cyan);
-    font-size: .9rem;
-    font-weight: 700;
+    font-size: .8rem;
+    font-weight: 600;
 }
 
 .card:hover .card_img {
@@ -465,9 +465,8 @@ h6 {
 .card__description {
     margin: .1rem 0;
     margin: 0px 0 0;
-    font-size: .9rem;
+    font-size: .8rem;
     color: var(--primary);
-    line-height: 1.4;
 }
 
 .card_info {
@@ -478,7 +477,7 @@ h6 {
 }
 
 .card_info .card_icon {
-    width: 25px;
+    width: 15px;
 }
 
 .card_info a {
@@ -502,6 +501,7 @@ h6 {
     color: var(--cyant);
     font-family: 'Fira Code', monospace;
     font-weight: 400;
+    letter-spacing: 00.05rem;
 
 }
 
@@ -521,7 +521,7 @@ h6 {
 }
 
 .branch .icon {
-    height: 3rem;
+    height: 2.4rem;
 }
 
 .branch span {
@@ -531,28 +531,6 @@ h6 {
     font-size: 6rem;
 
 }
-
-
-.hobbie {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hobbie .icon {
-    height: 50px;
-    transition: all 250ms;
-}
-
-
-
-.hobbie span {
-    font-family: 'Fira Code', monospace;
-    font-size: .5rem;
-    color: var(--secondary);
-}
-
 
 
 .form {
@@ -575,7 +553,7 @@ h6 {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 20px 10px 10px;
+    padding: 25px 10px 10px;
     font-size: .8rem;
     color: var(--secondary);
     letter-spacing: 00.05rem;
@@ -603,7 +581,7 @@ h6 {
 .form__input:valid~.form__label,
 .form__input:focus~.form__label {
     color: var(--cyan);
-    transform: translateX(-5px) translateY(-20px);
+    transform: translateX(-5px) translateY(-25px);
     top: -25%;
     font-size: .8rem;
     filter: drop-shadow(0px 0px 4px var(--cyan));
@@ -630,6 +608,8 @@ h6 {
 }
 
 /* *Fin Estilos inputs */
+
+
 
 .form__cnt__btn {
     display: flex;
@@ -673,25 +653,42 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
 
+footer .cnt-footer {
+    width: 100%;
+    font-size: .7rem;
 }
 
 footer a {
+
     color: var(--cyan);
-    width: 100%;
 }
 
-footer div {
-    padding: 0rem 2rem;
-}
 
-footer .email {
-    width: 100%;
+footer .social-footer {
     border-top: 1px solid var(--cyant);
-    padding: 1rem 0;
+    padding: 1rem;
+    font-size: .7rem;
+}
+
+footer .social-footer>span {
+    display: block;
+}
+
+footer .social-footer>a {
+    display: block;
+}
+
+footer .cnt-social-footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+}
+
+.social-footer .highlight:hover {
+    color: var(--cyan);
 }
 
 

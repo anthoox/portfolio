@@ -73,6 +73,10 @@ body {
     color: var(--secondary);
 }
 
+.light {
+    color: var(--primary);
+}
+
 .rigth {
     text-align: right;
 }
@@ -245,7 +249,6 @@ section {
 .content-data-social,
 .cv {
     margin-top: 1rem;
-
 }
 
 h1,
@@ -285,11 +288,11 @@ h6 {
 }
 
 .content .hello {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .content .name {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: var(--cyan);
 }
 
@@ -325,8 +328,6 @@ h6 {
     color: var(--primary);
     cursor: pointer;
     font-size: 1.3rem;
-
-
 }
 
 
@@ -335,7 +336,6 @@ h6 {
     color: var(--cyan);
     scale: 1.2;
     filter: drop-shadow(0px 0px 4px var(--cyan));
-
 }
 
 .content .cv {
@@ -374,7 +374,7 @@ h6 {
 }
 
 .content .title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--cyan);
     text-align: center;
     margin-bottom: .5rem;
@@ -385,7 +385,7 @@ h6 {
 }
 
 .content .p {
-    font-size: .9rem;
+    font-size: .85rem;
 }
 
 
@@ -439,6 +439,7 @@ h6 {
     width: 100%;
     height: 100%;
     padding: 1rem;
+    gap: .2rem;
     box-sizing: border-box;
     background-color: var(--bg);
     opacity: 1;
@@ -477,7 +478,7 @@ h6 {
 }
 
 .card_info .card_icon {
-    width: 15px;
+    width: 1.3rem;
 }
 
 .card_info a {
@@ -693,6 +694,8 @@ footer .cnt-social-footer {
 
 
 /* medias */
+
+@media (width >=250px) {}
 
 @media (width >=400px) {
     html {

@@ -8,7 +8,7 @@
     --secondary: #c8d6e5;
 
     --cyan: #00FFFF;
-    --cyant: #00FFFF50;
+    --cyant: #00FFFF80;
     --purple: #5F27CD;
     --purplet: #5F27CD50;
 
@@ -161,7 +161,7 @@ body {
     bottom: 0;
     padding: 1rem;
     background-color: var(--bg);
-    width: calc(100% - 32px);
+    width: calc(100% - 2rem);
     box-shadow: 0px 1px 16px var(--cyant);
     border-top: 2px solid var(--cyan);
     border-radius: 1rem 1rem 0 0;
@@ -241,13 +241,17 @@ section {
     justify-content: center;
 }
 
-.content h1,
-h2,
-h6,
+
 .content-data-social,
 .cv {
-    margin-top: .8rem;
+    margin-top: 1rem;
 
+}
+
+h1,
+h2,
+h6 {
+    margin-top: .25rem;
 }
 
 .content {
@@ -269,6 +273,7 @@ h6,
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0rem 0rem 0rem;
 }
 
 .content .content-photo {
@@ -279,16 +284,19 @@ h6,
     color: var(--cyan);
 }
 
+.content .hello {
+    font-size: 1.2rem;
+}
 
 .content .name {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--cyan);
 }
 
 .content .profession {
     text-align: center;
     font-family: 'Fira Code', monospace;
-    font-size: .7rem;
+    font-size: .8rem;
     font-weight: 400;
     display: inline-block;
     padding: .15em .5rem;
@@ -296,10 +304,16 @@ h6,
 
 .content .content-data-social {
 
-    padding: .25rem 1rem;
+    padding: 0rem 1rem;
     border: 1px solid var(--cyan);
     border-radius: .25rem;
-    font-size: 1rem;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: .2rem;
 }
 
 .content .content-data-social:hover {
@@ -310,7 +324,12 @@ h6,
     transition: all 250ms;
     color: var(--primary);
     cursor: pointer;
+    font-size: 1.3rem;
+
+
 }
+
+
 
 .content .icon-social i:hover {
     color: var(--cyan);
@@ -320,17 +339,18 @@ h6,
 }
 
 .content .cv {
-    font-size: .7rem;
+    font-size: .8rem;
     font-family: 'Fira Code', monospace;
     font-weight: 500;
     border: 1px solid var(--cyan);
-    padding: .5rem 1rem;
+    padding: 0rem 1rem;
     background-color: transparent;
     border-radius: .25rem;
     transition: 250ms;
     cursor: pointer;
     color: var(--cyan);
-    max-width: 100px;
+    height: 40px;
+    width: 100px;
 }
 
 .content .cv:hover {
@@ -375,10 +395,8 @@ h6,
 
 .card {
     position: relative;
-    width: 226.52px;
-    height: 140px;
-    /* max-width: 380px;
-    max-height: 270px; */
+    width: 291.24px;
+    height: 180px;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -431,7 +449,6 @@ h6,
 
 .card:hover .card__content {
     transform: rotateX(0deg);
-
 }
 
 .card__title {
@@ -446,8 +463,9 @@ h6,
 }
 
 .card__description {
+    margin: .1rem 0;
     margin: 0px 0 0;
-    font-size: .8rem;
+    font-size: .9rem;
     color: var(--primary);
     line-height: 1.4;
 }
@@ -460,18 +478,15 @@ h6,
 }
 
 .card_info .card_icon {
-    width: 20px;
+    width: 25px;
 }
 
 .card_info a {
     color: var(--cyan);
     font-weight: 600;
-    font-size: .7rem;
+    font-size: .8rem;
 }
 
-.card .card__description {
-    margin: .1rem 0;
-}
 
 /* FIN CONFIGURACIÓN CARD DE PROYECTOS*/
 
@@ -485,12 +500,15 @@ h6,
     text-align: center;
     margin: 0;
     color: var(--cyant);
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+
 }
 
 .branch .branch-tech {
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 1rem;
 
 }
 
@@ -503,22 +521,17 @@ h6,
 }
 
 .branch .icon {
-    height: 2.5rem;
-
+    height: 3rem;
 }
 
 .branch span {
     font-size: .5rem;
     color: var(--cyan);
-}
-
-.branch span {
     margin-top: 0.25rem;
-    font-size: .6rem;
-    color: var(--primary);
-    font-family: 'Fira Code', monospace;
+    font-size: 6rem;
 
 }
+
 
 .hobbie {
     display: flex;
@@ -744,36 +757,63 @@ footer .email {
         display: block;
     }
 
-
-
     .content {
         padding: 3rem 3rem;
     }
 
+
+
     .content .content-intro {
-        margin-top: 3rem;
+        margin-top: 5rem;
         display: flex;
         justify-content: space-between;
     }
 
     .content .content-data {
         padding: 0;
-        width: 45%;
+        width: 40%;
 
-    }
-
-    .content .photo {
-        width: 175px;
     }
 
     .content .content-photo {
         display: flex;
-        width: 45%;
+        width: 40%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        transition: all 500ms;
+        opacity: .9;
     }
+
+
+    .content .content-photo:hover {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    .content .photo {
+        width: 250px;
+    }
+
+    .a__photo {
+        border: 1px solid var(--cyan);
+        background-color: var(--cyan);
+        border-radius: 50%;
+        background: var(--gradient);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+
+    .photo {
+        display: block;
+        width: 250px;
+        border-radius: 50%;
+    }
+
+    .name {
+        font-size: 2em;
+    }
+
 
     .card {
         width: 323.6px;
@@ -784,7 +824,7 @@ footer .email {
         margin-bottom: 1.5rem;
     }
 
-    .prueba {
+    .cnt {
         display: flex;
         gap: 1rem;
     }
@@ -794,5 +834,12 @@ footer .email {
         flex-direction: row;
         justify-content: space-between;
         gap: 4rem;
+    }
+}
+
+@media (width >=940px) {
+
+    .content_in {
+        padding: 1rem 2rem;
     }
 }

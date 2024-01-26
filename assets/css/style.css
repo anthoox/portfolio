@@ -36,7 +36,8 @@
 html {
     font-size: 16px;
     font-family: 'Nunito', sans-serif;
-    outline: 0;
+    font-weight: 400;
+
     scroll-behavior: smooth;
     color: var(--primary);
     box-sizing: content-box;
@@ -156,6 +157,16 @@ body {
 .cnt-btn,
 .icon-cerrar {
     display: none;
+}
+
+.nav-menu a {
+    color: var(--cyan);
+    transition: all 250ms;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+    text-decoration: underline var(--cyan);
 }
 
 
@@ -310,8 +321,8 @@ h6 {
     padding: 0rem 1rem;
     border: 1px solid var(--cyan);
     border-radius: .25rem;
-    height: 40px;
-    width: 100px;
+    height: 30px;
+    width: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,9 +350,9 @@ h6 {
 }
 
 .content .cv {
-    font-size: .8rem;
+    font-size: .7rem;
     font-family: 'Fira Code', monospace;
-    font-weight: 500;
+    font-weight: 400;
     border: 1px solid var(--cyan);
     padding: 0rem 1rem;
     background-color: transparent;
@@ -349,8 +360,8 @@ h6 {
     transition: 250ms;
     cursor: pointer;
     color: var(--cyan);
-    height: 40px;
-    width: 100px;
+    height: 30px;
+    width: 90px;
 }
 
 .content .cv:hover {
@@ -438,7 +449,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: .9rem;
     gap: .2rem;
     box-sizing: border-box;
     background-color: var(--bg);
@@ -446,6 +457,7 @@ h6 {
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 1rem;
 }
 
 .card:hover .card__content {
@@ -454,7 +466,7 @@ h6 {
 
 .card__title {
     color: var(--cyan);
-    font-size: .8rem;
+    font-size: .85rem;
     font-weight: 600;
 }
 
@@ -464,8 +476,6 @@ h6 {
 }
 
 .card__description {
-    margin: .1rem 0;
-    margin: 0px 0 0;
     font-size: .8rem;
     color: var(--primary);
 }
@@ -479,6 +489,10 @@ h6 {
 
 .card_info .card_icon {
     width: 1.3rem;
+}
+
+.card_info .cnt-card_icon {
+    height: 23.8px;
 }
 
 .card_info a {
@@ -502,19 +516,16 @@ h6 {
     color: var(--cyant);
     font-family: 'Fira Code', monospace;
     font-weight: 400;
-    letter-spacing: 00.05rem;
-
+    letter-spacing: .05rem;
 }
 
 .branch .branch-tech {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-
 }
 
 .branch .tech {
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -530,7 +541,6 @@ h6 {
     color: var(--cyan);
     margin-top: 0.25rem;
     font-size: 6rem;
-
 }
 
 
@@ -611,7 +621,6 @@ h6 {
 /* *Fin Estilos inputs */
 
 
-
 .form__cnt__btn {
     display: flex;
     justify-content: center;
@@ -619,7 +628,8 @@ h6 {
 
 .form__btn--enviar {
     font-family: 'Fira Code', monospace;
-    font-weight: 500;
+    font-size: .8rem;
+    font-weight: 400;
     margin-top: .5rem;
     border: 1px solid var(--cyan);
     padding: .5em 1rem;
@@ -662,10 +672,8 @@ footer .cnt-footer {
 }
 
 footer a {
-
     color: var(--cyan);
 }
-
 
 footer .social-footer {
     border-top: 1px solid var(--cyant);
@@ -695,36 +703,124 @@ footer .cnt-social-footer {
 
 /* medias */
 
-@media (width >=250px) {}
+@media (width >=250px) {
+    html {
+        font-size: 17px;
+    }
 
-@media (width >=400px) {
+    .card {
+        width: 226.52px;
+        height: 140px;
+    }
+
+    footer .cnt-footer {
+        font-size: .8rem;
+    }
+
+    footer .social-footer {
+        font-size: .8rem;
+    }
+
+}
+
+@media (width >=300px) {
+    .card {
+        width: 258.88px;
+        height: 160px;
+    }
+
+    .card__content {
+        padding: 1.1rem;
+    }
+
+    .card_info .card_icon {
+        width: 1.4rem;
+    }
+
+}
+
+@media (width >=360px) {
+
     html {
         font-size: 18px;
     }
 
 
+    .content .name {
+        font-size: 1.5rem;
+
+    }
+
+    .content .profession {
+        font-size: .7rem;
+    }
+
     .card {
-        width: 275.06px;
-        height: 170px;
+        width: 291.24px;
+        height: 180px;
+    }
+
+    .card__content {
+        padding: 1.2rem;
+    }
+
+    .card_info .card_icon {
+        width: 1.5rem;
+    }
+
+    .card__description {
+        font-size: .85rem;
+    }
+
+    .content {
+        padding: 2rem 1.5rem;
+    }
+
+    .content .cv {
+        width: 105px;
+    }
+
+    .content .content-data-social {
+        width: 105px;
+
     }
 
     .card-mb {
         margin-bottom: 1rem;
     }
+}
 
-    .content {
-        padding: 2rem 1rem;
+@media (width >=450px) {
+
+
+    .card {
+        width: 323.6px;
+        height: 200px;
+    }
+
+    .card__title {
+        font-size: .9rem;
+    }
+
+    .card__content {
+        padding: 1.65rem;
+
+    }
+
+    .card_info .card_icon {
+        width: 1.5rem;
     }
 
 
 }
 
-@media (width >=680px) {
+@media (width >=576px) {
 
     #logo-1 {
         width: 110px;
     }
 
+    /* 
 
     .nav-menu {
         display: block;
@@ -733,19 +829,10 @@ footer .cnt-social-footer {
     .nav-menu ul {
         display: flex;
         gap: 1rem;
-    }
+    } */
 
-    .nav-menu a {
-        color: var(--cyan);
-        transition: all 250ms;
-    }
 
-    .nav-menu a:hover {
-        color: var(--primary);
-        text-decoration: underline var(--cyan);
-    }
-
-    .icon-menu {
+    /* .icon-menu {
         display: none;
     }
 
@@ -755,7 +842,7 @@ footer .cnt-social-footer {
 
     .header .btn-contact {
         display: block;
-    }
+    } */
 
     .content {
         padding: 3rem 3rem;
@@ -769,6 +856,7 @@ footer .cnt-social-footer {
         justify-content: space-between;
     }
 
+    /* 
     .content .content-data {
         padding: 0;
         width: 40%;
@@ -783,7 +871,7 @@ footer .cnt-social-footer {
         align-items: center;
         transition: all 500ms;
         opacity: .9;
-    }
+    } */
 
 
     .content .content-photo:hover {
@@ -837,9 +925,15 @@ footer .cnt-social-footer {
     }
 }
 
-@media (width >=940px) {
+@media (width >=768px) {
 
     .content_in {
         padding: 1rem 2rem;
     }
 }
+
+@media (width >=992px) {}
+
+@media (width >=1200px) {}
+
+@media (width >=1400px) {}

@@ -553,12 +553,15 @@ h6,
     gap: 1rem;
 }
 
+
+
 .branch .tech {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 33%;
 }
+
 
 .branch .icon {
     height: 2.4rem;
@@ -682,8 +685,12 @@ h6,
 }
 
 .content-in #logo-3 {
-    transition: all 250ms;
+    transition: ease-out 250ms;
     width: 110px;
+}
+
+.content-in #logo-3:hover {
+    scale: 1.1;
 }
 
 footer {
@@ -913,36 +920,6 @@ footer .icon-social {
 
 
 
-
-
-
-
-    /* .content .content-intro {
-        margin-top: 5rem;
-        display: flex;
-        justify-content: space-between;
-    } */
-
-    /* 
-    .content .content-data {
-        padding: 0;
-        width: 40%;
-
-    }
-
-    .content .content-photo {
-        display: flex;
-        width: 40%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all 500ms;
-        opacity: .9;
-    } */
-
-
-
-
     .cnt {
         display: flex;
         gap: 20px;
@@ -994,7 +971,7 @@ footer .icon-social {
 
 @media (width >=992px) {
     .header {
-        padding: 1rem 3rem;
+        padding: 2rem 3rem;
     }
 
     .nav-menu {
@@ -1020,12 +997,77 @@ footer .icon-social {
         display: block;
     }
 
+    .content_in .branch:nth-child(2) .branch-tech {
+        justify-content: space-around;
+    }
 
 }
 
 @media (width >=1200px) {
+    .content .hello {
+        font-size: 1.5rem;
+    }
 
-    /* A partir de aqui activar foto  */
+    .content .name {
+        font-size: 2.2rem;
+
+    }
+
+    .content .profession {
+        font-size: .9rem;
+
+    }
+
+
+
+    .content .icon-social {
+        font-size: 24px;
+    }
+
+    .content .content-intro {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    .content .content-data {
+        padding: 0;
+        width: 40%;
+
+    }
+
+    .content .content-photo {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 500ms;
+        opacity: .9;
+    }
+
+
+
+    .content .a__photo {
+        border: 2px solid var(--cyan);
+        background-color: var(--cyan);
+        width: 250px;
+        border-radius: 50%;
+        background: var(--gradient);
+        box-shadow:
+            rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+            rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    .content .photo {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+    }
+
     /* Que todos los contenedores tengan la misma 
     separación por arriba y por abajo */
     .card-mb {

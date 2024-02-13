@@ -1,6 +1,7 @@
 /* Colores */
 :root {
     --bg: #282a36;
+    --bg-trans: #282a3670;
 
     --black: #000000;
     --primary: #F5F9FF;
@@ -37,7 +38,6 @@ html {
     font-size: 16px;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
-
     scroll-behavior: smooth;
     color: var(--primary);
     box-sizing: content-box;
@@ -56,14 +56,13 @@ body {
 
 /* Clases de configuración */
 .fixeder_header {
-    transition: all 500ms;
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 3rem);
     opacity: 0.95;
     box-shadow:
         0px 6px 16px rgba(0, 0, 0, 0.14);
+    border-bottom: 1px solid var(--cyan);
 }
 
 .hidden {
@@ -76,14 +75,6 @@ body {
 
 .light {
     color: var(--primary);
-}
-
-.rigth {
-    text-align: right;
-}
-
-.bg-black {
-    background-color: var(--black);
 }
 
 .jump {
@@ -104,14 +95,30 @@ body {
 
 
 /* -----------------header y nav----------------- */
+header {
+    width: 100%;
+    z-index: 2000;
+
+}
+
+main {
+    position: relative;
+
+}
+
 .header {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg);
+    background-color: var(--bg-trans);
     z-index: 2000;
+    margin: auto;
+    max-width: 1200px;
 }
+
+
 
 .header a {
     display: flex;
@@ -161,7 +168,6 @@ body {
 
 .nav-menu a {
     color: var(--cyan);
-    transition: all 250ms;
 }
 
 .nav-menu a:hover {
@@ -268,15 +274,13 @@ h2,
 h6,
 .hello {
     margin-top: .25rem;
-    /* font-family: 'Nunito', sans-serif; */
+
 }
 
 .content {
-    max-width: 1024px;
+    max-width: 1200px;
     width: 100%;
     padding: 1.5rem 1rem;
-    /* padding-bottom: 0 !important; */
-    /* margin-bottom: 0 !important; */
     display: flex;
     flex-direction: column;
 }
@@ -302,6 +306,7 @@ h6,
 .content .content-photo:hover {
     transform: scale(1.05);
     opacity: 1;
+
 }
 
 .content .photo {
@@ -428,7 +433,6 @@ h6,
 
 
 
-
 /* CONFIGURACIÓN CARD DE PROYECTOS*/
 
 .card {
@@ -534,7 +538,7 @@ h6,
 .branch {
     display: flex;
     flex-direction: column;
-
+    margin-bottom: .5rem;
 }
 
 .branch h6 {
@@ -551,6 +555,7 @@ h6,
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    margin-top: .25rem;
 }
 
 .branch .tech {
@@ -690,6 +695,8 @@ h6,
 }
 
 footer {
+    position: relative;
+    top: 100px;
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
@@ -735,7 +742,7 @@ footer .cnt-social-footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
 }
 
 footer .icon-social {
@@ -858,6 +865,10 @@ footer .icon-social {
     footer .icon-social {
         font-size: 1rem;
     }
+
+    footer .cnt-social-footer {
+        padding: 0 1rem;
+    }
 }
 
 @media (width >=450px) {
@@ -902,6 +913,10 @@ footer .icon-social {
 }
 
 @media (width >=576px) {
+    .content .title {
+        margin-bottom: .75rem;
+    }
+
     html {
         font-size: 20px;
     }
@@ -914,6 +929,10 @@ footer .icon-social {
         padding: 3rem 3rem;
     }
 
+
+    .content .name {
+        font-size: 2rem;
+    }
 
 
     .cnt {
@@ -933,7 +952,7 @@ footer .icon-social {
     }
 
     .card .card__content {
-        padding: 33px;
+        padding: 30px;
     }
 
     .card-mb {
@@ -942,6 +961,8 @@ footer .icon-social {
 }
 
 @media (width >=768px) {
+
+
 
     .content .cv {
         width: 112px;
@@ -966,9 +987,22 @@ footer .icon-social {
 }
 
 @media (width >=992px) {
-    .header {
-        padding: 2rem 3rem;
+    .content .title {
+        margin-bottom: 1rem;
     }
+
+    #logo-1 {
+        width: 120px;
+    }
+
+    .content .name {
+        font-size: 2.2rem;
+    }
+
+    .header {
+        padding: 1rem 2rem;
+    }
+
 
     .nav-menu {
         display: block;
@@ -997,49 +1031,64 @@ footer .icon-social {
         justify-content: space-around;
     }
 
+    footer .cnt-social-footer {
+        padding: 0 2rem;
+    }
+
 }
 
 @media (width >=1200px) {
-    .content .hello {
-        font-size: 1.5rem;
+    html {
+        font-size: 22px;
+    }
+
+    #logo-1 {
+        width: 130px;
+    }
+
+    .content {
+        padding: 3.5rem;
+    }
+
+    .nav-menu {
+        font-size: 22px;
     }
 
     .content .name {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
 
     }
-
-    .content .profession {
-        font-size: .9rem;
-
-    }
-
-
 
     .content .icon-social {
         font-size: 24px;
     }
 
     .content .content-intro {
-        margin-top: 5rem;
+        margin-top: 3rem;
+        padding: 0 2rem;
         display: flex;
         justify-content: space-between;
+        width: 100%;
+        max-width: 1100px;
     }
 
 
 
     .content .content-data {
         padding: 0;
-        width: 40%;
+        /* width: 50%; */
+        align-items: flex-start;
 
     }
 
+
+
     .content .content-photo {
         display: flex;
-        width: 40%;
+        /* width: 50%; */
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         transition: all 500ms;
         opacity: .9;
     }
@@ -1049,13 +1098,14 @@ footer .icon-social {
     .content .a__photo {
         border: 2px solid var(--cyan);
         background-color: var(--cyan);
-        width: 250px;
+        width: 280px;
         border-radius: 50%;
         background: var(--gradient);
         box-shadow:
             rgba(0, 0, 0, 0.4) 0px 2px 4px,
             rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
             rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
     }
 
     .content .photo {
@@ -1064,8 +1114,7 @@ footer .icon-social {
         border-radius: 50%;
     }
 
-    /* Que todos los contenedores tengan la misma 
-    separación por arriba y por abajo */
+
     .card-mb {
         margin-bottom: 0;
     }

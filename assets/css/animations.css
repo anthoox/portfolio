@@ -21,10 +21,12 @@
   }
 
   to {
-    width: 33ch;
+    width: 32ch;
   }
 
 }
+
+@media (width >=600px) {}
 
 /* *iconos de tecnologias */
 .icon__tech:hover {
@@ -36,7 +38,9 @@
 
 }
 
-
+/* html {
+  font-size: 16px;
+} */
 
 /* *boton dia noche */
 .switch-name {
@@ -87,7 +91,7 @@
   left: .5px;
   top: -.5px;
   height: 15px;
-  padding: .2em;
+  padding: .12em;
   fill: var(--moon);
   transition: .5s;
 }
@@ -107,6 +111,7 @@
   .switch-name {
     width: 50px;
     height: 25px;
+    right: 10px;
   }
 
   .switch-name .moon {

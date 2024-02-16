@@ -23,7 +23,7 @@
 
 /* Configuración general */
 [id] {
-    scroll-margin-top: 10ex;
+    scroll-margin-top: 3ex;
 }
 
 * {
@@ -98,12 +98,52 @@ body {
 header {
     width: 100%;
     z-index: 2000;
-
+    background-color: var(--bg);
 }
 
 main {
     position: relative;
+}
 
+
+.btn-up {
+    display: block;
+    width: 2em;
+    height: 2em;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background-color: var(--bg);
+    padding: .5em;
+    border-radius: 50%;
+    transition: 250ms;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    z-index: 2500;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.btn-up:hover {
+    cursor: pointer;
+    background-color: var(--cyan);
+    color: var(--black);
+}
+
+.btn-up:active {
+    scale: .9;
+}
+
+.btn-up:active~a {
+    color: var(--black);
+}
+
+.btn-up i {
+    font-size: 1.25rem;
+}
+
+.btn-up i:active {
+
+    color: var(--black);
 }
 
 .header {
@@ -278,8 +318,8 @@ h6,
 }
 
 .content {
-    max-width: 1200px;
     width: 100%;
+    max-width: 1200px;
     padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
@@ -448,10 +488,11 @@ h6,
     perspective: 1000px;
     transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-color: var(--bg);
+    margin-bottom: 1rem;
 }
 
-.card-mb {
-    margin-bottom: .5rem;
+.card:last-child {
+    margin-bottom: 0rem;
 }
 
 .card .card_img {
@@ -703,6 +744,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 footer .cnt-footer {
@@ -921,6 +963,7 @@ footer .icon-social {
         font-size: 20px;
     }
 
+
     #logo-1 {
         width: 110px;
     }
@@ -983,10 +1026,17 @@ footer .icon-social {
         height: 220px;
     }
 
+    .btn-up {
+        right: 25px;
+    }
 
 }
 
 @media (width >=992px) {
+    main {
+        top: 50px;
+    }
+
     .content .title {
         margin-bottom: 1rem;
     }
@@ -1031,6 +1081,10 @@ footer .icon-social {
         justify-content: space-around;
     }
 
+    .btn-up {
+        right: 30px;
+    }
+
     footer .cnt-social-footer {
         padding: 0 2rem;
     }
@@ -1040,6 +1094,10 @@ footer .icon-social {
 @media (width >=1200px) {
     html {
         font-size: 22px;
+    }
+
+    main {
+        top: 0px;
     }
 
     #logo-1 {
@@ -1131,6 +1189,11 @@ footer .icon-social {
         gap: 2rem;
     }
 
-}
+    .btn-up {
+        right: 40px;
+    }
 
-@media (width >=1400px) {}
+    .card {
+        margin-bottom: 0rem;
+    }
+}

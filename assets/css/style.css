@@ -228,7 +228,7 @@ main {
     width: 100%;
     border-bottom: 1px solid var(--cyan);
     z-index: 200;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
     background-color: var(--purplet);

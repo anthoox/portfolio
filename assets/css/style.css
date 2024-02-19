@@ -725,19 +725,47 @@ main {
     justify-content: center;
 }
 
+.text-arrow {
+    position: fixed;
+    bottom: 75px;
+}
+
+.tooltiptext {
+    display: none;
+    width: 110px;
+    font-size: .9rem;
+    color: var(--cyan);
+    text-align: center;
+    border-radius: .25rem;
+
+    position: fixed;
+    bottom: 75px;
+    z-index: 1;
+    animation: opacidad 1s ease;
+    text-shadow: 0px 0px 4px var(--cyan);
+}
+
+
+
+
+
+
 .icon-arrow {
     position: fixed;
     width: 35px;
     transform: rotate(-45deg);
     bottom: 50px;
     filter: drop-shadow(0px 0px 1px var(--cyan));
+    /* cursor: pointer; */
 }
+
+
 
 .icon-arrow-animation {
+    transition: 0ms;
+
     animation: scrollAnimation 2s ease-in-out .1s infinite;
 }
-
-
 
 
 .form__cnt__btn {
@@ -1087,6 +1115,12 @@ footer .cnt-footer {
 
     }
 
+    .tooltiptext {
+
+        bottom: 80px;
+
+    }
+
 
     .content .title {
         margin-bottom: 1rem;
@@ -1159,6 +1193,12 @@ footer .cnt-footer {
     }
 
 
+
+    .tooltiptext {
+
+        bottom: 85px;
+
+    }
 
 
 

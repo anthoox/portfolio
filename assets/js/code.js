@@ -7,6 +7,7 @@ window.onload = function () {
     const btnMenu = document.querySelector('.icon-menu');
     const btnCerrar = document.querySelector('.icon-cerrar');
     const arrow = document.querySelector('.icon-arrow');
+    const mensaje = document.querySelector('.tooltiptext');
 
     // Ajustamos los estilos al cargar la página y al cambiar el tamaño de la ventana
     ajustarEstilo();
@@ -18,16 +19,14 @@ window.onload = function () {
         arrow.style.display = 'none';
         setTimeout(() => {
             arrow.style.display = 'block';
-        }, 2500)
-        setTimeout(() => {
             arrow.classList.add('icon-arrow-animation');
-        }, 2501)
+            setTimeout(() => {
+                mensaje.style.display = 'block';
+            }, 2000)
 
-        // Pasado un tiempo no mostar icono de arrow
-        // setTimeout(() => {
-        //     // arrow.classList.remove('icon-arrow-animation');
-        //     arrow.style.display = 'none';
-        // }, 8000)
+        }, 1000)
+
+
 
         // Obtenemos el ancho de la ventana
         const anchoVentana = window.innerWidth;
@@ -98,6 +97,9 @@ window.onload = function () {
             ajustarHeader();
             main.style.top = '162px';
             arrow.style.display = 'none';
+
+            mensaje.style.display = 'none';
+
         } else {
             // Si el desplazamiento vertical de la ventana es 0, se oculta el botón de retorno y se restablece el header
             btnUP.style.display = 'none';

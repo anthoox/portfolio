@@ -107,7 +107,9 @@ header {
 }
 
 main {
+
     position: relative;
+    top: 81px;
 }
 
 
@@ -321,7 +323,6 @@ main {
 
 /* Main, section y content */
 section {
-    background-color: var(--bg);
     display: flex;
     justify-content: center;
 }
@@ -348,9 +349,9 @@ h6,
     flex-direction: column;
 }
 
-.content .content-in {
+/* .content .content-in {
     width: 100%;
-}
+} */
 
 .content .content-data {
     width: 100%;
@@ -715,6 +716,28 @@ h6,
 }
 
 /* *Fin Estilos inputs */
+main {
+    position: relative;
+}
+
+.cnt-arrow {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-arrow {
+    position: fixed;
+    width: 35px;
+    transform: rotate(-45deg);
+    bottom: 50px;
+    filter: drop-shadow(0px 0px 1px var(--cyan));
+}
+
+.icon-arrow-animation {
+    animation: scrollAnimation 2s ease-in-out .1s infinite;
+}
+
+
 
 
 .form__cnt__btn {
@@ -751,8 +774,9 @@ h6,
 
 
 footer {
-    top: 50px;
+
     position: relative;
+    top: 162px;
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
@@ -764,6 +788,8 @@ footer {
 footer .cnt-footer {
     width: 100%;
     font-size: .7rem;
+    background-color: var(--bg);
+
 }
 
 footer a {
@@ -793,22 +819,27 @@ footer .social-footer>a {
     display: block;
 }
 
+
 footer .cnt-social-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* padding: 0 2rem; */
+
 }
 
 footer .icon-social {
     font-size: .7rem;
 }
 
-.content-in #logo-3 {
+
+.cnt-footer #logo-3 {
     width: 90px;
 }
 
+footer .cnt-footer {
+    padding: 3rem 0 0 0;
+}
 
 
 /* medias */
@@ -994,7 +1025,7 @@ footer .icon-social {
         gap: 20px;
     }
 
-    .content-in #logo-3 {
+    .cnt-footer #logo-3 {
         width: 110px;
     }
 
@@ -1046,12 +1077,16 @@ footer .icon-social {
 @media (width >=992px) {
 
     [id] {
-        scroll-margin-top: 8ex;
+        scroll-margin-top: 5ex;
     }
 
-    main {
-        top: 50px;
+    .icon-arrow {
+
+        width: 40px;
+
+
     }
+
 
     .content .title {
         margin-bottom: 1rem;
@@ -1069,9 +1104,10 @@ footer .icon-social {
         padding: 1rem 2rem;
     }
 
+    /* 
     .nav {
         display: none;
-    }
+    } */
 
     .nav-menu {
         display: block;
@@ -1115,19 +1151,26 @@ footer .icon-social {
         font-size: 22px;
     }
 
+    .icon-arrow {
+
+        width: 50px;
 
 
-    main {
-        top: 0px;
     }
+
+
+
+
 
     #logo-1 {
         width: 130px;
     }
 
     .content {
-        padding: 3.5rem;
+        padding: 4.5rem;
     }
+
+
 
     .nav-menu {
         font-size: 22px;

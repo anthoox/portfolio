@@ -14,54 +14,45 @@ window.onload = function () {
     window.addEventListener('resize', ajustarEstilo);
 
 
+
+    function animationArrow() {
+        arrow.style.display = 'none';
+        mensaje.style.display = 'none';
+        const posicion = window.scrollY;
+
+        console.log(posicion)
+        const estado = getComputedStyle(btnUP).getPropertyValue('display');
+        // console.log(estado)
+        if (estado === 'none' && posicion == 0) {
+            console.log(posicion)
+            // if (posicion != null) {
+            setTimeout(() => {
+                arrow.style.display = 'block';
+                arrow.classList.add('icon-arrow-animation');
+
+                mensaje.style.display = 'block';
+
+            }, 2250)
+            // }
+
+
+        }
+    }
+
+
+    animationArrow();
+
     // Función para ajustar los estilos según el tamaño de la ventana y la posición del nav
     function ajustarEstilo() {
-        arrow.style.display = 'none';
-        setTimeout(() => {
-            arrow.style.display = 'block';
-            arrow.classList.add('icon-arrow-animation');
-            setTimeout(() => {
-                mensaje.style.display = 'block';
-            }, 2000)
-
-        }, 1000)
-
-
-
         // Obtenemos el ancho de la ventana
         const anchoVentana = window.innerWidth;
-
-        // Obtenemos la posición vertical del header
-        const rect = header.getBoundingClientRect();
-        const posY = rect.top;
-
-        // Si el header no está en la posición inicial
-        if (posY > 0) {
-
-
-
-            // Se ajustan los estilos para fijar el header en la parte superior y mostrar el botón de retorno
-            btnUP.style.display = "block";
-            header.classList.add("fixeder_header");
-            if (posY > 0) {
-                header.classList.add("border-shadow");
-                header.classList.remove("fixeder_header");
-
-            }
-            let topHeader = header.offsetHeight;
-            nav.style.top = topHeader + 'px';
-            main.style.top = topHeader + 'px';
-        }
-
 
         // Si el ancho de la ventana es mayor que 992px
         if (anchoVentana > 992) {
             // Se oculta el menú y se establecen otros estilos
             ocultarMenu();
-
             header.style.borderBottom = 'none';
             btnCerrar.style.display = 'none';
-
 
         } else {
             // Si el ancho de la ventana es menor o igual a 992px, se muestra el botón de menú
@@ -72,10 +63,6 @@ window.onload = function () {
                 btnMenu.style.display = 'none';
             }
         }
-
-
-
-
     }
 
     // Abrir el menú
@@ -100,6 +87,9 @@ window.onload = function () {
 
             mensaje.style.display = 'none';
 
+
+
+
         } else {
             // Si el desplazamiento vertical de la ventana es 0, se oculta el botón de retorno y se restablece el header
             btnUP.style.display = 'none';
@@ -117,8 +107,6 @@ window.onload = function () {
         // Se añade la clase para fijar el header si aún no está fijo
         header.classList.add('fixeder_header');
 
-
-
         // Si el header no está fijo, se añade sombra y se ajusta la posición del nav
         if (estado !== 'fixed') {
             header.classList.add('border-shadow');
@@ -126,9 +114,6 @@ window.onload = function () {
             nav.style.top = `${topHeader}px`;
 
         }
-
-
-
     }
 
     // Función para resetear el header a su estado original
@@ -201,15 +186,13 @@ window.onload = function () {
     function animateSections() {
 
         sectionsArray.forEach(function (section, index) {
-            var rect = section.getBoundingClientRect();
-            if (rect.top < windowHeight * .80) { // Si la sección está a 3/4 de la ventana visible
+            const rect = section.getBoundingClientRect();
+            if (rect.top < windowHeight * .9) { // Si la sección está esa cantidad la ventana visible
                 section.classList.add('appear');
                 sectionsArray.splice(index, 1); // Eliminar la sección del array para no volver a animarla
             }
         });
-
     }
-
 
 
     // Animar las secciones cuando la página carga por primera vez

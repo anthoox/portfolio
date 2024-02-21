@@ -2,8 +2,7 @@
 :root {
     --bg: #282a36;
     --bg-trans: #282a3670;
-
-
+    --bg-mensaje: #E9EFFF60;
     --black: #000000;
     --primary: #F5F9FF;
 
@@ -24,7 +23,7 @@
 
 /* Configuración general */
 [id] {
-    scroll-margin-top: 40ex;
+    scroll-margin-top: 50ex;
 }
 
 * {
@@ -118,7 +117,7 @@ main {
     width: 2em;
     height: 2em;
     color: var(--cyan);
-    border: 1px solid var(--cyan);
+    border: 2px solid var(--cyan);
     background-color: var(--bg);
     padding: .5em;
     border-radius: 50%;
@@ -149,13 +148,12 @@ main {
 }
 
 .btn-up i:active {
-
     color: var(--black);
 }
 
 .header {
     padding: 1rem;
-    width: calc(100%-2rem);
+    width: calc(100% - 2rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -163,9 +161,6 @@ main {
     z-index: 2000;
     margin: auto;
     max-width: 1200px;
-
-
-
 }
 
 .header a {
@@ -228,7 +223,6 @@ main {
     transition: all 250ms;
     display: flex;
     position: fixed;
-    padding: 0rem;
     width: 100%;
     border-bottom: 1px solid var(--cyan);
     z-index: 200;
@@ -252,12 +246,10 @@ main {
 
 .nav li {
     transition: all 250ms;
-    padding: .5rem;
+    padding: 1rem 0;
     width: 100%;
     border-top: 1px solid #00000000;
     border-bottom: 1px solid #00000000;
-
-
 }
 
 
@@ -806,6 +798,32 @@ main {
     scale: .9;
 }
 
+.mensaje-email {
+    position: fixed;
+    bottom: calc(50% - 25px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mensaje-email .email {
+    display: block;
+    transition: all 250ms;
+    width: 60%;
+    padding: 1rem;
+    max-width: 300px;
+    font-family: 'Fira Code', monospace;
+    color: var(--cyan);
+    font-weight: 400;
+    background-color: var(--bg-mensaje);
+    text-align: center;
+    border-radius: .25em;
+    backdrop-filter: blur(10px);
+    text-shadow: 0px 0px 4px var(--cyan);
+    animation: fadeOut 2s ease-in-out 2s forwards;
+}
 
 footer {
 
@@ -1111,7 +1129,7 @@ footer .cnt-footer {
 @media (width >=992px) {
 
     [id] {
-        scroll-margin-top: 5ex;
+        scroll-margin-top: 3ex;
     }
 
     .icon-arrow {
@@ -1138,6 +1156,7 @@ footer .cnt-footer {
 
     .header {
         padding: 1rem 2rem;
+        width: calc(100% - 4rem);
     }
 
     /* 

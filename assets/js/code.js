@@ -8,11 +8,15 @@ window.onload = function () {
     const btnCerrar = document.querySelector('.icon-cerrar');
     const arrow = document.querySelector('.icon-arrow');
     const mensaje = document.querySelector('.tooltiptext');
+    const cntMail = document.querySelector('.mensaje-email');
+
+
 
     // Ajustamos los estilos al cargar la página y al cambiar el tamaño de la ventana
     ajustarEstilo();
     window.addEventListener('resize', ajustarEstilo);
 
+    animationArrow();
 
 
     function animationArrow() {
@@ -20,23 +24,22 @@ window.onload = function () {
         mensaje.style.display = 'none';
         const posicion = window.scrollY;
 
-        console.log(posicion)
         const estado = getComputedStyle(btnUP).getPropertyValue('display');
-        // console.log(estado)
         if (estado === 'none' && posicion == 0) {
-            console.log(posicion)
-            // if (posicion != null) {
-            setTimeout(() => {
-                arrow.style.display = 'block';
-                arrow.classList.add('icon-arrow-animation');
 
-                mensaje.style.display = 'block';
+            let altura = cntMail.offsetHeight;
+            if (altura == 0) {
+                setTimeout(() => {
+                    arrow.style.display = 'block';
+                    arrow.classList.add('icon-arrow-animation');
 
-            }, 2250)
-            // }
+                    mensaje.style.display = 'block';
 
-
+                }, 2250)
+            }
         }
+
+
     }
 
 
@@ -84,11 +87,7 @@ window.onload = function () {
             ajustarHeader();
             main.style.top = '162px';
             arrow.style.display = 'none';
-
             mensaje.style.display = 'none';
-
-
-
 
         } else {
             // Si el desplazamiento vertical de la ventana es 0, se oculta el botón de retorno y se restablece el header

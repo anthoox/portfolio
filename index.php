@@ -163,20 +163,15 @@ if ($error == false) {
                 <h3 class="title">Sobre mi</h3>
                 <div class="content_in ">
                     <p class="p ">
-                        Mi viaje en el desarrollo web comenzó de manera autodidacta aprendiendo
-                        <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>
-                        Mas adelante accedi al grado superior para obtener mi titulación oficial y aunque mi enfoque era
-                        el desarrollo <strong>frontend</strong>, me sorprendi trabajando en el lado
+                        Mi viaje en el desarrollo web comenzó hace dos años de manera autodidacta. Mas adelante accedi al grado superior para obtener mi titulación oficial y aunque mi enfoque inicial era el desarrollo <strong>frontend</strong>, me sorprendi trabajando en el lado
                         del <strong>backend</strong>, con <strong>PHP</strong>.
-
                     </p>
                     <p class="p jump highlight  ">
-                        Mi objetivo es la creación de webs atractivas, <strong class="light">accesibles</strong> y
-                        <strong class="light">adaptables</strong>, y así satisfacer
+                        Mi objetivo es crear sitios web <strong class="light">atractivos</strong> y <strong class="light">accesibles</strong> que satisfagan
                         las necesidades de los usuarios.
                     </p>
 
-                    <p class="p jump ">Puedes conocerme más por <a target="_blank" href="proyectos/CV/index.html" class="cyan" title="Ver más">aquí</a>.
+                    <p class="p jump ">Puedes conocer más mi expriencia laboral por <a target="_blank" href="proyectos/CV/index.html" class="cyan" title="Ver más">aquí</a>.
                     </p>
                 </div>
             </div>

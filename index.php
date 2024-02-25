@@ -190,7 +190,7 @@ if ($error == false) {
 
                     <!-- PROYECTOS -->
                     <div class="card ">
-                        <img class="card_img" src="assets/img/proyectos/Dado2.png" alt="Aplicación Dados">
+                        <img class="card_img" src="assets/img/proyectos/Dado.png" alt="Aplicación Dados">
                         <div class="card__content">
                             <h4 class="card__title">Cubo 2D/3D</h4>
                             <p class="card__description">Dado interactivo con versión en 2D y 3D. Uso de perspectiva y
@@ -216,7 +216,7 @@ if ($error == false) {
                     </div>
 
                     <div class="card ">
-                        <img class="card_img" src="assets/img/proyectos/flamencosevillaclass2.png" alt="Web flamencosevillaclass.es">
+                        <img class="card_img" src="assets/img/proyectos/fsc.png" alt="Web flamencosevillaclass.es">
                         <div class="card__content">
                             <h4 class="card__title">FlamencoSevillaClass</h4>
                             <p class="card__description">Web de reservas de cursos y eventos de flamenco realizado en
@@ -389,7 +389,9 @@ if ($error == false) {
             ?>
 
         </div>
+
         <a href="#home"><button class="btn-up "><i class="las la-angle-up"></i></i></button></a>
+
         <div class="cnt-arrow">
 
             <div class="tooltiptext">Scroll</div>

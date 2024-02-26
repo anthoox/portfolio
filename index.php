@@ -145,7 +145,8 @@ if ($error == false) {
                                 <a class="icon-social" href="mailto:anthony@anthoox.es" target="_blank"><i class="las la-at" title="anthony@anthoox.es"></i></a>
                             </div>
 
-                            <button class="cv">Descargar CV</button>
+                            <a href="assets/resources/cv_anthony_alegria.pdf" download="cv_anthony_alegria.pdf"> <button class="cv">
+                                    Descargar CV</button></a>
                         </div>
                     </div>
 

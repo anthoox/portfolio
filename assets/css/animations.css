@@ -1,12 +1,4 @@
 /* *Escritura de profesión */
-.profession {
-  padding-right: .7em;
-  border-right: 4px solid;
-  width: 32ch;
-  white-space: nowrap;
-  animation: typing 2s steps(32), blink .5s infinite step-end alternate;
-  overflow: hidden;
-}
 
 @keyframes typing {
   from {
@@ -21,22 +13,11 @@
   }
 
   to {
-    width: 32ch;
+    width: 33ch;
   }
 
 }
 
-@media (width >=600px) {}
-
-/* *iconos de tecnologias */
-.icon__tech:hover {
-  scale: 1.2;
-}
-
-.icon__tech2:hover {
-  scale: 1.2;
-
-}
 
 
 /* *boton dia noche */
@@ -131,7 +112,7 @@
 
 
 
-
+/* * Animación scroll */
 .section-animation {
   opacity: 0;
   transform: translateY(60px);
@@ -141,44 +122,31 @@
 .section-animation.appear {
   opacity: 1 !important;
   transform: translateY(0px);
-
-
 }
-
-
-
 
 
 @keyframes scrollAnimation {
 
   0% {
-
-
     transform: rotate(-45deg);
-
   }
 
   100% {
-
-
     transform: rotate(-45deg);
-
     filter: drop-shadow(0px 0px 2px var(--cyan));
-
   }
 
   50% {
-
     bottom: 40px;
-
     scale: 1.2;
     transform: rotate(-45deg);
-
     filter: drop-shadow(0px 0px 3px var(--cyan));
-
   }
 }
 
+
+
+/* *Animación texto tras envio de email */
 @keyframes opacidad {
   0% {
     opacity: 0;
@@ -189,7 +157,6 @@
   50% {
     opacity: .5;
     text-shadow: 0px 0px 2px var(--cyan);
-
 
   }
 

@@ -1,25 +1,30 @@
 /* Colores */
+.light-mode {
+    --bg: #FaFAFA;
+    --primary: #000000;
+    --cyan: #5F27CD;
+    --cyant: #5F27CD80;
+    --black: #F5F9FF;
+    --secondary: #3A3A3A;
+    --purple: #00FFFF;
+    --purplet: #00ffff80;
+    --bg-trans: #FaFAFA70;
+}
+
 :root {
     --bg: #282a36;
     --bg-trans: #282a3670;
     --bg-mensaje: #E9EFFF60;
     --black: #000000;
     --primary: #F5F9FF;
-
     --secondary: #c8d6e5;
-
     --cyan: #00FFFF;
     --cyant: #00FFFF80;
     --purple: #5F27CD;
-    --purplet: #5F27CD50;
-
+    --purplet: #5F27CD80;
     --gradient: linear-gradient(45deg, var(--cyan) 0%, var(--purple) 100%);
-
-    /* Configuración modo oscuro */
-    background-color: Canvas;
-    color: CanvasText;
-    color-scheme: dark;
 }
+
 
 /* Configuración general */
 [id] {
@@ -39,7 +44,7 @@ html {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     scroll-behavior: smooth;
-    color: var(--primary);
+
     box-sizing: content-box;
 
 }
@@ -52,6 +57,7 @@ ul {
 
 body {
     background-color: var(--bg);
+    color: var(--primary);
 }
 
 /* Clases de configuración */
@@ -229,7 +235,7 @@ main {
     backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
-    background-color: var(--purplet);
+    background-color: var(--bg-trans);
 
 }
 
@@ -287,7 +293,7 @@ main {
     display: none;
     font-family: 'Fira Code', monospace;
     font-size: .7rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: .5em;
     border: 1px solid var(--cyan);
     padding: .5em 1em;
@@ -400,7 +406,7 @@ h6,
     text-align: center;
     font-family: 'Fira Code', monospace;
     font-size: .65rem;
-    font-weight: 400;
+    font-weight: 500;
     display: inline-block;
     border-right: 4px solid;
     width: 33ch;
@@ -448,7 +454,7 @@ h6,
 .content .cv {
     font-size: .7rem;
     font-family: 'Fira Code', monospace;
-    font-weight: 400;
+    font-weight: 500;
     border: 1px solid var(--cyan);
     padding: 0rem 1rem;
     background-color: transparent;
@@ -607,7 +613,7 @@ h6,
     margin: 0;
     color: var(--cyant);
     font-family: 'Fira Code', monospace;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: .05rem;
     font-size: .7rem;
 }
@@ -667,7 +673,7 @@ h6,
 
 .form__input {
     font-family: 'Fira Code', monospace;
-    font-weight: 400;
+    font-weight: 500;
     position: relative;
     width: calc(100% - 20px);
     padding: 20px 10px 10px;
@@ -776,7 +782,7 @@ main {
 .form__btn--enviar {
     font-family: 'Fira Code', monospace;
     font-size: .7rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: .5rem;
     border: 1px solid var(--cyan);
     padding: .5em 1rem;
@@ -818,7 +824,7 @@ main {
     max-width: 300px;
     font-family: 'Fira Code', monospace;
     color: var(--cyan);
-    font-weight: 400;
+    font-weight: 500;
     background-color: var(--bg-mensaje);
     text-align: center;
     border-radius: .25em;

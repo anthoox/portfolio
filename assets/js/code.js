@@ -1,3 +1,4 @@
+
 window.onload = function () {
     // Variables seleccionadas del DOM
     const header = document.querySelector('header');
@@ -10,7 +11,44 @@ window.onload = function () {
     const mensaje = document.querySelector('.tooltiptext');
     const cntMail = document.querySelector('.mensaje-email');
 
+    const iconosNav = document.querySelectorAll('.icon-nav');
+    const btnCheck = document.querySelector('.checkbox');
+    const logoHeader = document.getElementById('logo-1');
+    const card = document.querySelectorAll('.card');
 
+    btnCheck.addEventListener('click', () => {
+
+        if (!document.body.classList.contains('light-mode')) {
+            logoHeader.src = 'assets/img/logo/mc_morado.png';
+        } else {
+            logoHeader.src = 'assets/img/logo/mo_cyan_f.png';
+        }
+
+        iconosNav.forEach((element) => {
+            let ubicacion = element.src;
+            let ultimosCuatro = ubicacion.substring(ubicacion.length - 5);
+            if (ultimosCuatro == "2.svg") {
+                let nuevaUbicacion = ubicacion.replace("2.svg", "1.svg");
+                element.src = nuevaUbicacion
+            } else {
+                let nuevaUbicacion = ubicacion.replace("1.svg", "2.svg");
+                element.src = nuevaUbicacion
+            }
+        })
+
+        toggleDarkMode();
+
+
+        card.forEach((element) => {
+            element.classList.toggle('card-light');
+        })
+
+
+    })
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('light-mode');
+    }
 
     // Ajustamos los estilos al cargar la página y al cambiar el tamaño de la ventana
     ajustarEstilo();

@@ -103,8 +103,8 @@ if ($error == false) {
                         </path>
                     </svg>
                 </label>
-                <img class="icon icon-menu" src="assets/img/iconos/menu2.svg" alt="Icono menú">
-                <img class="icon icon-cerrar" src="assets/img/iconos/cerrar2.svg" alt="Icono cerrar">
+                <img class="icon icon-nav icon-menu" src="assets/img/iconos/menu2.svg" alt="Icono menú">
+                <img class="icon icon-nav icon-cerrar" src="assets/img/iconos/cerrar2.svg" alt="Icono cerrar">
 
                 <a class="cnt-btn" href="#contact"><button class="btn-contact">Contacto</button></a>
             </div>
@@ -145,8 +145,7 @@ if ($error == false) {
                                 <a class="icon-social" href="mailto:anthony@anthoox.es" target="_blank"><i class="las la-at" title="anthony@anthoox.es"></i></a>
                             </div>
 
-                            <a href="assets/resources/cv_anthony_alegria.pdf" download="cv_anthony_alegria.pdf"> <button class="cv">
-                                    Descargar CV</button></a>
+                            <button class="cv">Descargar CV</button>
                         </div>
                     </div>
 
@@ -199,10 +198,10 @@ if ($error == false) {
                                     <img class="card_icon" src="assets/img/iconos/js.svg" alt="icono de JavaScript">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="#"><img class="icon card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="#"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
                                     <a href="https://github.com/anthoox/pokedex">
-                                        <img class="icon card_icon" src="assets/img/iconos/gh2.svg" alt="icono de github" title="GitHub">
+                                        <img class="icon icon-nav card_icon" src="assets/img/iconos/gh2.svg" alt="icono de github" title="GitHub">
                                     </a>
 
                                 </div>
@@ -219,10 +218,10 @@ if ($error == false) {
                                 WordPress.</p>
                             <div class="card_info">
                                 <div class="cnt-card_icon">
-                                    <img class="card_icon" src="assets/img/iconos/wordpress.svg" alt="icono de HTML5">
+                                    <img class=" card_icon" src="assets/img/iconos/wordpress.svg" alt="icono de HTML5">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="https://www.flamencosevillaclass.es/"><img class="icon card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="https://www.flamencosevillaclass.es/"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
                                 </div>
 
@@ -243,10 +242,10 @@ if ($error == false) {
                                     <img class="card_icon" src="assets/img/iconos/js.svg" alt="icono de JavaScript">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="#"><img class="icon card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="#"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
                                     <a href="https://github.com/anthoox/pokedex">
-                                        <img class="icon card_icon" src="assets/img/iconos/gh2.svg" alt="icono de github" title="GitHub">
+                                        <img class="icon icon-nav card_icon" src="assets/img/iconos/gh2.svg" alt="icono de github" title="GitHub">
                                     </a>
                                 </div>
 
@@ -267,7 +266,7 @@ if ($error == false) {
                                     <img class="card_icon" src="assets/img/iconos/js.svg" alt="icono de JavaScript">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="#"><img class="icon card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="#"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
                                 </div>
 
@@ -388,10 +387,10 @@ if ($error == false) {
 
         <a href="#home"><button class="btn-up "><i class="las la-angle-up"></i></i></button></a>
 
-        <div class="cnt-arrow">
+        <div class=" cnt-arrow">
 
             <div class="tooltiptext">Scroll</div>
-            <img class="icon-arrow" src="assets/img/iconos/flecha2.svg" alt="">
+            <img class="icon-nav icon-arrow" src="assets/img/iconos/flecha2.svg" alt="">
         </div>
 
     </main>
@@ -400,7 +399,7 @@ if ($error == false) {
     <footer class="jump  ">
         <div class="cnt-footer ">
             <div class=" jump">
-                <img id="logo-3" src="assets/img/logo/prue.svg" alt="Logo web">
+                <img id="logo-3" src="assets/img/logo/logoWeb.svg" alt="Logo web">
             </div>
             <p class="highlight">Recursos de: <a class="blur" href="https://yes
                 icon.app/">yesicon</a>, <a class="blur" href="https://getcssscan.com/">getcssscan</a> y

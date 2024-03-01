@@ -9,6 +9,7 @@
     --purple: #00FFFF;
     --purplet: #00ffff80;
     --bg-trans: #FaFAFA70;
+    --gradient: linear-gradient(45deg, var(--cyan) 0%, var(--purple) 100%);
 }
 
 :root {
@@ -42,7 +43,7 @@
 html {
     font-size: 16px;
     font-family: 'Nunito', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     scroll-behavior: smooth;
 
     box-sizing: content-box;

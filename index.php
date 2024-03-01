@@ -69,7 +69,7 @@ if ($error == false) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Nunito:wght@300;400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="shortcut icon" href="assets/img/logo/iconoo.ico" />
+    <link rel="shortcut icon" href="assets/img/logo/icoLogo.ico" />
     <meta name="robots" content="index, follow">
     <script src="assets/js/code.js"></script>
 </head>
@@ -213,7 +213,7 @@ if ($error == false) {
                     <div class="card ">
                         <img class="card_img" src="assets/img/proyectos/fsc.png" alt="Web flamencosevillaclass.es">
                         <div class="card__content">
-                            <h4 class="card__title">FlamencoSevillaClass</h4>
+                            <h4 class="card__title">Flamenco Sevilla Class</h4>
                             <p class="card__description">Web de reservas de cursos y eventos de flamenco realizado en
                                 WordPress.</p>
                             <div class="card_info">

@@ -81,7 +81,6 @@ if ($error == false) {
         <div class="header bg-trans">
             <a href="#home"><img id="logo-1" src="assets/img/logo/mo_cyan_f.png" alt="Logo de la web" class="header-logo"></a>
 
-            <!-- Nav desktop -->
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#aboutme">Sobre mí</a></li>
@@ -91,8 +90,9 @@ if ($error == false) {
             </nav>
 
             <div class="header-btns">
-                <label class="switch-name">
-                    <input id="check1" type="checkbox" class="checkbox">
+                <label class="switch-name" for="check1">
+                    dark-light:
+                    <input id="check1" type="checkbox" class="checkbox" name="check1">
                     <div class="back"></div>
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                         <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
@@ -106,11 +106,9 @@ if ($error == false) {
                 <img class="icon icon-nav icon-menu" src="assets/img/iconos/menu2.svg" alt="Icono menú">
                 <img class="icon icon-nav icon-cerrar" src="assets/img/iconos/cerrar2.svg" alt="Icono cerrar">
 
-                <a class="cnt-btn" href="#contact"><button class="btn-contact">Contacto</button></a>
+                <a class="cnt-btn" aria-label="botón contacto" href="#contact"><button class="btn-contact">Contacto</button></a>
             </div>
         </div>
-
-
     </header>
 
     <!-- NAV MOVIL/TABLET -->
@@ -127,6 +125,7 @@ if ($error == false) {
 
     <!-- MAIN -->
     <main>
+
         <!-- HOME -->
         <section class="">
             <div class="content">
@@ -160,7 +159,7 @@ if ($error == false) {
         <!-- SOBRE MI -->
         <section class="section-animation" id="aboutme">
             <div class="content ">
-                <h3 class="title">Sobre mi</h3>
+                <h2 class="title">Sobre mi</h2>
                 <div class="content_in ">
                     <p class="p ">
                         Mi viaje en el desarrollo web comenzó hace dos años de manera autodidacta. Mas adelante accedi al grado superior para obtener mi titulación oficial y aunque mi enfoque inicial era el desarrollo <strong>frontend</strong>, me sorprendi trabajando en el lado
@@ -180,14 +179,14 @@ if ($error == false) {
         <!-- PROYECTOS -->
         <section class="section-animation" id="proyects">
             <div class="content">
-                <h3 class="title">Proyectos</h3>
+                <h2 class="title">Proyectos</h2>
                 <div class="content_in cnt-center mt">
 
                     <!-- PROYECTOS -->
                     <div class="card ">
                         <img class="card_img" src="assets/img/proyectos/Dado.png" alt="Aplicación Dados">
                         <div class="card__content">
-                            <h4 class="card__title">Cubo 2D/3D</h4>
+                            <h3 class="card__title">Cubo 2D/3D</h3>
                             <p class="card__description">Dado interactivo con versión en 2D y 3D. Uso de perspectiva y
                                 animaciones.
                             </p>
@@ -232,7 +231,7 @@ if ($error == false) {
                     <div class="card ">
                         <img class="card_img" src="assets/img/proyectos/pkdex.png" alt="Imagen Pokédex">
                         <div class="card__content">
-                            <h4 class="card__title">Pokédex</h4>
+                            <h3 class="card__title">Pokédex</h3>
                             <p class="card__description">Pokédex interactiva. Conexión con la PokeAPI para obtener
                                 los datos de los Pokémon.</p>
                             <div class="card_info">
@@ -256,7 +255,7 @@ if ($error == false) {
                     <div class="card">
                         <img class="card_img" src="assets/img/proyectos/miwiki.png" alt="Imagen web wiki">
                         <div class="card__content">
-                            <h4 class="card__title">miWiki</h4>
+                            <h3 class="card__title">miWiki</h3>
                             <p class="card__description">Web guia HTML inspirada en Wikipedia. Segunda versión de un
                                 proyecto de Freecodecamp.</p>
                             <div class="card_info">
@@ -281,7 +280,7 @@ if ($error == false) {
         <!-- TECNOLOGIAS -->
         <section class="section-animation" id="tech">
             <div class="content">
-                <h3 class="title">Tecnologías</h3>
+                <h2 class="title">Tecnologías</h2>
                 <div class="content_in">
                     <div class="branch">
                         <h6>Frontend</h6>
@@ -341,7 +340,7 @@ if ($error == false) {
         <!-- CONTACTO -->
         <section class="section-animation" id="contact">
             <div class="content">
-                <h3 class="title">Contacto</h3>
+                <h2 class="title">Contacto</h2>
                 <div class="content_in">
                     <p class="p center"><span class="cyan">¡</span>Hablemos<span class="cyan">!</span> Estoy
                         a
@@ -350,17 +349,17 @@ if ($error == false) {
                     <form class="form " action="index.php#contact" method="POST">
                         <div class="cnt__input cnt__input--1">
 
-                            <input id="input_1" class="form__input" type="text" name="nombre" required>
+                            <input id="nombre" class="form__input" type="text" name="nombre" required>
                             <label class="form__label" for="nombre">Nombre</label>
                             <i></i>
                         </div>
                         <div class="cnt__input cnt__input--2">
-                            <input id="input_2" class="form__input" type="text" name="email" required>
+                            <input id="email" class="form__input" type="text" name="email" required>
                             <label class="form__label" for="email">Email</label>
                             <i></i>
                         </div>
                         <div class="cnt__input cnt__input--3">
-                            <input id="input_3" class="form__input" type="text" name="mensaje" required>
+                            <input id="mensaje" class="form__input" type="text" name="mensaje" required>
                             <label class="form__label" for="mensaje">Mensaje</label>
 
                             <i></i>
@@ -375,6 +374,7 @@ if ($error == false) {
             </div>
         </section>
 
+        <!-- MENSAJE FLOTANTE -->
         <div class="mensaje-email">
 
             <?php
@@ -385,8 +385,10 @@ if ($error == false) {
 
         </div>
 
-        <a href="#home"><button class="btn-up "><i class="las la-angle-up"></i></i></button></a>
+        <!-- BOTÓN UP -->
+        <a href="#home" aria-label="Ir al principio"><button name="subir" class="btn-up "><i class="las la-angle-up"></i></i></button></a>
 
+        <!-- ICONO SCROLL -->
         <div class=" cnt-arrow">
 
             <div class="tooltiptext">Scroll</div>

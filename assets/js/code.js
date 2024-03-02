@@ -112,6 +112,8 @@ window.onload = function () {
     // Cerrar el menú
     btnCerrar.addEventListener('click', cerrarMenu);
 
+    // Cerrar el menú al dar click en main
+    main.addEventListener('click', cerrarMenu);
 
     // Escuchar el evento de desplazamiento de la ventana
     window.addEventListener('scroll', () => {
@@ -192,8 +194,12 @@ window.onload = function () {
 
     // Función para cerrar el menú
     function cerrarMenu() {
-        btnMenu.style.display = 'block';
-        btnCerrar.style.display = 'none';
+        const anchoVentana = window.innerWidth;
+        if (anchoVentana < 992) {
+            btnMenu.style.display = 'block';
+            btnCerrar.style.display = 'none';
+        }
+
         nav.style.transform = 'translateY(-200%)';
         const estado = window.getComputedStyle(header).getPropertyValue('position');
         // Si el header no está fijo, se elimina la sombra después de un pequeño retraso

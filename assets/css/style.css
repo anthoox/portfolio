@@ -1168,10 +1168,6 @@ footer .cnt-footer {
         width: calc(100% - 4rem);
     }
 
-    /* 
-    .nav {
-        display: none;
-    } */
 
     .nav-menu {
         display: block;

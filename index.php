@@ -91,7 +91,6 @@ if ($error == false) {
 
             <div class="header-btns">
                 <label class="switch-name" for="check1">
-                    dark-light:
                     <input id="check1" type="checkbox" class="checkbox" name="check1">
                     <div class="back"></div>
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -144,7 +143,7 @@ if ($error == false) {
                                 <a class="icon-social" href="mailto:anthony@anthoox.es" target="_blank"><i class="las la-at" title="anthony@anthoox.es"></i></a>
                             </div>
 
-                            <button class="cv">Descargar CV</button>
+                            <a href="assets/resources/cv_anthony_alegria.pdf" download="cv_anthony_alegria.pdf"><button class="cv">Descargar CV</button></a>
                         </div>
                     </div>
 
@@ -170,7 +169,7 @@ if ($error == false) {
                         las necesidades de los usuarios.
                     </p>
 
-                    <p class="p jump ">Puedes conocer más mi expriencia laboral por <a target="_blank" href="proyectos/CV/index.html" class="cyan" title="Ver más">aquí</a>.
+                    <p class="p jump ">Puedes conocer más mi expriencia laboral por <a target="_blank" href="websites/laboral/index.html" class="cyan" title="Ver más">aquí</a>.
                     </p>
                 </div>
             </div>
@@ -184,7 +183,7 @@ if ($error == false) {
 
                     <!-- PROYECTOS -->
                     <div class="card ">
-                        <img class="card_img" src="assets/img/proyectos/Dado.png" alt="Aplicación Dados">
+                        <img class="card_img" src="assets/img/proyectos/dado.png" alt="Web Dados">
                         <div class="card__content">
                             <h3 class="card__title">Cubo 2D/3D</h3>
                             <p class="card__description">Dado interactivo con versión en 2D y 3D. Uso de perspectiva y
@@ -197,9 +196,9 @@ if ($error == false) {
                                     <img class="card_icon" src="assets/img/iconos/js.svg" alt="icono de JavaScript">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="#"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="websites/dados/index.html" target="_blank"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
-                                    <a href="https://github.com/anthoox/pokedex">
+                                    <a href="https://github.com/anthoox/dados" target="_blank">
                                         <img class="icon icon-nav card_icon" src="assets/img/iconos/gh2.svg" alt="icono de github" title="GitHub">
                                     </a>
 
@@ -220,7 +219,7 @@ if ($error == false) {
                                     <img class=" card_icon" src="assets/img/iconos/wordpress.svg" alt="icono de HTML5">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="https://www.flamencosevillaclass.es/"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="https://www.flamencosevillaclass.es/" target="_blank"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
                                 </div>
 
@@ -241,9 +240,9 @@ if ($error == false) {
                                     <img class="card_icon" src="assets/img/iconos/js.svg" alt="icono de JavaScript">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="#"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="websites/pokedex/index.html" target="_blank"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
-                                    <a href="https://github.com/anthoox/pokedex">
+                                    <a href="https://github.com/anthoox/pokedex" target="_blank">
                                         <img class="icon icon-nav card_icon" src="assets/img/iconos/gh2.svg" alt="icono de github" title="GitHub">
                                     </a>
                                 </div>
@@ -265,7 +264,7 @@ if ($error == false) {
                                     <img class="card_icon" src="assets/img/iconos/js.svg" alt="icono de JavaScript">
                                 </div>
                                 <div class="cnt-card_icon">
-                                    <a href="#"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
+                                    <a href="websites/miWiki/index.html" target="_blank"><img class="icon icon-nav card_icon" src="assets/img/iconos/w2.svg" alt="icono de web" title="Visitar"></a>
 
                                 </div>
 
